@@ -1,5 +1,7 @@
+--- @module 'oxwm'
+
 -- Use fc-list to see all fonts
-local colors = require("colors.lua")
+local colors = require("colors")
 local bar_font = "Jetbrains Mono:style=Bold:size=14"
 local blocks = {
     oxwm.bar.block.ram({

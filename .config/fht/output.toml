@@ -1,6 +1,0 @@
-[outputs.eDP-1]
-mode = "2560x1600@120"
-scale = 1
-position.x = 0
-position.y = 0
-vrr = "on-demand"

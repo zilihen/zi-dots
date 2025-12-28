@@ -1,11 +1,11 @@
---- @module 'owxm'
+--- @module 'oxwm'
 
 -- Set up variables 
 local terminal = "wezterm"
 local mod = "Mod4"
 
 oxwm.set_terminal(terminal)
-oxwm.set_modkey(modkey)
+oxwm.set_modkey(mod)
 
 -- Basic Usage and binds 
 -- oxwm.key.bind({ mod, "Control" }, "Q", oxwm.quit())
