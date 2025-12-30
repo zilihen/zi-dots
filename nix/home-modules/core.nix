@@ -47,6 +47,8 @@
     prismlauncher
 
     jdk
+    rustup
+    cargo
     vscode
     starship
   ];
