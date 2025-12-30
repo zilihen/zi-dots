@@ -1,0 +1,80 @@
+{
+  inputs,
+  pkgs,
+  ...
+}:
+
+{
+
+  imports = [
+    inputs.oxwm.nixosModules.default
+  ];
+
+
+  services.upower.enable = true;
+  services.blueman.enable = true;
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      gutenprint
+      canon-cups-ufr2
+      cnijfilter2
+      cups-filters
+    ];
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+  };
+
+  services.displayManager.ly.enable = true;
+
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    windowManager.oxwm.enable = true;
+  };
+
+  # services.greetd = {
+  #   enable = true;
+  #   settings.default_session = {
+  #     user = "chen";
+  #     # command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+  #     command = "Hyprland";
+  #   };
+  # };
+
+  # Sounds is good
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    wireplumber.enable = true;
+    jack.enable = true;
+
+  };
+
+  # Security is good
+  security = {
+    polkit.enable = true;
+  };
+
+  hardware = {
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = true;
+  };
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true; 
+    config.common.default = ["gtk"];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
+    ];
+    configPackages = [ pkgs.hyprland ];
+  };
+}
