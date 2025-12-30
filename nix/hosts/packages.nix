@@ -1,25 +1,6 @@
 { inputs, pkgs, ... }:
 
 {
-  programs = {
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = false;
-      gamescopeSession.enable = true;
-      extraCompatPackages = [ pkgs.proton-ge-bin ];
-    };
-
-    gamescope = {
-      enable = true;
-      capSysNice = true;
-      args = [
-        "--rt"
-        # "--expose-wayland"
-      ];
-    };
-  };
-
   fonts.packages = with pkgs; [
     noto-fonts-color-emoji
     noto-fonts-cjk-sans
@@ -36,11 +17,7 @@
     zip
     unzip
     xrandr
+		xbindkeys
     udiskie
   ];
-
-  # programs to be enable across all hosts
-  programs = {
-    thunar.enable = true;
-  };
 }
