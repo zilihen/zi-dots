@@ -37,17 +37,18 @@
     gtksourceview3
     libchamplain_libsoup3
     brightnessctl
-    pavucontrol
+    pwvucontrol
     playerctl
     spotify
     ani-cli
     microsoft-edge
     discord
-
+    
     prismlauncher
 
     jdk
     vscode
+    starship
   ];
 
   programs.wezterm.enable = true;
