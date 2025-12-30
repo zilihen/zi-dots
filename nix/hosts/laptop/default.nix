@@ -16,6 +16,7 @@
     ./../stylix.nix
     ./../services.nix
     ./../packages.nix
+		./../steam.nix
   ];
 
   services.logind = {
