@@ -51,6 +51,7 @@
     cargo
     vscode
     starship
+		dunst
   ];
 
   programs.wezterm.enable = true;
