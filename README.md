@@ -9,22 +9,9 @@
 
 # Setting up on a new machine
 
-clone it as a git bare repo 
-```bash
-git clone --bare git@github.com:ItsZiling/.cfg.git .cfg
+Currently using nixos so just clone run 
+```sh
+sudo nixos-rebuild switch --flake .#host_name
 ```
 
-set up a temporary alias
-```bash
-alias cfg='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
-```
-
-checkout
-```bash
-cfg checkout
-```
-
-Optional Local Configuration: Ignore untracked files
-```bash
-cfg config --local status.showUntrackedFiles no
-```
+Will create a install script for non-nixos system but for now just symlink/rsync everything in the config folder
