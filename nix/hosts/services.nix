@@ -29,11 +29,22 @@
     nssmdns4 = true;
   };
 
-  services.displayManager.ly.enable = true;
+  services.libinput.enable = true;
+  services.libinput.touchpad = {
+    tapping = true;
+    naturalScrolling = true;
+    clickMethod = [ "clickfinger" "buttonareas" ];
+    scrollMethod = "twofinger";
+    accelProfile = "adaptive";
+    accelSpeed = 0;
+  };
 
+  services.displayManager.ly.enable = true;
   services.xserver = {
     enable = true;
     xkb.layout = "us";
+    autoRepeatDelay = 250;
+    autoRepeatInterval = 25;
     windowManager.oxwm.enable = true;
   };
 
