@@ -1,9 +1,20 @@
 { config, pkgs, ... }:
 
-{
+let
+    dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
+    
+    configs = {
+        oxwm = "oxwm";
+        wezterm = "wezterm";
+        fish = "fish"
+        "starship.toml" = "starship.toml";
+    };
+in
 
+{
   imports = [
-    ./core.nix
+    ./home-modules/core.nix
+    ./home-modules/stylix.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -39,11 +50,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  stylix = { 
-    enable = true; 
-    targets = { 
-      wezterm.enable = false;
-      vscode.enable = false;
-    };
-  };
+  xdg.configFile = builtins.mapAttrs (name: subpath: {
+        source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${subpath}";
+        recursive = true;
+    }) configs;
 }
