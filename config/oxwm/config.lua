@@ -2,6 +2,11 @@
 
 ---@module 'oxwm'
 
+-- autostart
+oxwm.autostart("dunst")
+oxwm.autostart("udiskie")
+oxwm.autostart("--no-startup-id xbindkeys")
+
 -- local variables
 local tags = { "", "󰊯", "", "", "󰙯", "󱇤", "", "󱘶", "󰧮" }
 local terminal = "wezterm"
