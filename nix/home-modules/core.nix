@@ -52,6 +52,7 @@
     vscode
     starship
 		dunst
+    btop
   ];
 
   programs.wezterm.enable = true;

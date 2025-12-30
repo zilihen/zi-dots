@@ -8,6 +8,7 @@ let
         wezterm = "wezterm";
         fish = "fish"
         "starship.toml" = "starship.toml";
+        dunst = "dunst";
     };
 in
 

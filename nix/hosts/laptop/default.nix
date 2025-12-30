@@ -16,7 +16,7 @@
     ./../stylix.nix
     ./../services.nix
     ./../packages.nix
-	./../steam.nix
+    ./../gaming.nix
   ];
 
   services.logind = {
@@ -66,6 +66,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "video"
     ];
     packages = with pkgs; [ ];
   };
