@@ -62,7 +62,6 @@
   # Define user
   users.users.chen = {
     isNormalUser = true;
-    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
