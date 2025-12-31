@@ -35,8 +35,8 @@ oxwm.key.bind({ mod, "Control" }, "F", oxwm.layout.set("normie"))
 oxwm.key.bind({ mod, "Control" }, "T", oxwm.layout.set("tiling"))
 
 -- tiling layout control; Master-Slave layout
-oxwm.key.bind({ mod }, "bracketleft", oxwm.set_master_factor(-5))
-oxwm.key.bind({ mod }, "bracketright", oxwm.set_master_factor(5))
+oxwm.key.bind({ mod }, "Bracketleft", oxwm.set_master_factor(-5))
+oxwm.key.bind({ mod }, "Bracketright", oxwm.set_master_factor(5))
 oxwm.key.bind({ mod }, "I", oxwm.inc_num_master(1))
 oxwm.key.bind({ mod }, "P", oxwm.inc_num_master(-1))
 oxwm.key.bind({ mod }, "Up", oxwm.client.focus_stack(1))

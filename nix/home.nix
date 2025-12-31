@@ -8,7 +8,6 @@ let
         wezterm = "wezterm";
         fish = "fish"
         "starship.toml" = "starship.toml";
-        dunst = "dunst";
     };
 in
 
@@ -55,26 +54,4 @@ in
         source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${subpath}";
         recursive = true;
     }) configs;
-
-	home.file.".xbindkeysrc".text = ''
-    # Volume Up
-    "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-        XF86AudioRaiseVolume
-
-    # Volume Down
-    "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        XF86AudioLowerVolume
-
-    # Mute/Unmute
-    "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        XF86AudioMute
-
-    # Brightness Up
-    "brightnessctl set +5%"
-        XF86MonBrightnessUp
-
-    # Brightness Down
-    "brightnessctl set 5%-"
-        XF86MonBrightnessDown
-  '';
 }
