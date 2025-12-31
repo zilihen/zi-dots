@@ -6,7 +6,7 @@ let
     configs = {
         oxwm = "oxwm";
         wezterm = "wezterm";
-        fish = "fish"
+        fish = "fish";
         "starship.toml" = "starship.toml";
     };
 in
