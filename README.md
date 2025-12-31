@@ -1,5 +1,6 @@
 # Window Manager
 - oxwm by tony (currently using and testing how it feels)
+- hyprland (used on NixOS) 
 
 # Font
 - Jetbrains Mono (Also the Nerd font for icons)
@@ -9,7 +10,7 @@
 
 # Setting up on a new machine
 
-Currently using nixos so just clone run 
+Currently using nixos so just clone and run 
 ```sh
 sudo nixos-rebuild switch --flake .#host_name
 ```
