@@ -27,10 +27,10 @@
   services.libinput.touchpad = {
     tapping = true;
     naturalScrolling = true;
-    clickMethod = [ "clickfinger" "buttonareas" ];
+    clickMethod = "clickfinger";
     scrollMethod = "twofinger";
     accelProfile = "adaptive";
-    accelSpeed = 0;
+    accelSpeed = "0";
   };
 
   services.displayManager.ly.enable = true;
