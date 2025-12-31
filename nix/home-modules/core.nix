@@ -47,16 +47,15 @@
     prismlauncher
 
     jdk
-    rustup
     cargo
     vscode
     starship
-		dunst
+	dunst
     btop
+    fish
   ];
 
   programs.wezterm.enable = true;
-  programs.fish.enable = true; 
 
   programs.git = {
     enable = true;
