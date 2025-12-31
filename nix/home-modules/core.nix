@@ -50,9 +50,10 @@
     cargo
     vscode
     starship
-	dunst
+    dunst
     btop
     fish
+    gh
   ];
 
   programs.wezterm.enable = true;
