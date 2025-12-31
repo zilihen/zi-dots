@@ -11,7 +11,6 @@
 
 {
   imports = [
-    #TODO import the necessary hardware from github depending on the laptop
     ./hardware-configuration.nix
     ./../stylix.nix
     ./../services.nix
@@ -19,12 +18,12 @@
     ./../gaming.nix
   ];
 
-  services.logind = {
-    lidSwitch = "suspend";
-    lidSwitchExternalPower = "lock";
-    lidSwitchDocked = "ignore";
-    powerKey = "suspend";
-    powerKeyLongPress = "poweroff";
+  services.logind.settings.Login = {
+    HandleLidSwitch = "suspend";
+    HandleLidSwitchExternalPower = "lock";
+    HandleLidSwitchDocked = "ignore";
+    HandlePowerKey = "suspend";
+    HandlePowerKeyLongPress = "poweroff";
   };
 
   nix = {

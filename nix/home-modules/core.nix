@@ -60,7 +60,9 @@
 
   programs.git = {
     enable = true;
-    userName = "zi";
-    userEmail = "jasonchen7766@gmail.com";
+    settings = {
+      user.name = "zi";
+      user.email = "jasonchen7766@gmail.com";
+    };
   };
 }

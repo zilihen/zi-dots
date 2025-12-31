@@ -5,12 +5,6 @@
 }:
 
 {
-
-  imports = [
-    inputs.oxwm.nixosModules.default
-  ];
-
-
   services.upower.enable = true;
   services.blueman.enable = true;
 
