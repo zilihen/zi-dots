@@ -15,6 +15,7 @@ in
   imports = [
     ./home-modules/core.nix
     ./home-modules/stylix.nix
+    ./home-modules/xscreensaver.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

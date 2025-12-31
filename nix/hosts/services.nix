@@ -65,6 +65,7 @@
   # Security is good
   security = {
     polkit.enable = true;
+    pam.services.xscreensaver.enable = true
   };
 
   hardware = {
