@@ -32,7 +32,7 @@
     accelProfile = "adaptive";
     accelSpeed = "0";
   };
-
+  
   services.displayManager.ly.enable = true;
   services.xserver = {
     enable = true;
@@ -40,6 +40,7 @@
     autoRepeatDelay = 250;
     autoRepeatInterval = 25;
     windowManager.oxwm.enable = true;
+    displayManager.startx.enable = true;
   };
 
   # services.greetd = {
@@ -65,7 +66,7 @@
   # Security is good
   security = {
     polkit.enable = true;
-    pam.services.xscreensaver.enable = true
+    pam.services.xscreensaver.enable = true;
   };
 
   hardware = {

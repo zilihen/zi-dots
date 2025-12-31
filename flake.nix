@@ -13,11 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hardware.url = "github:nixos/nixos-hardware";
   };
 
@@ -26,6 +21,7 @@
       self,
       nixpkgs,
       home-manager,
+      oxwm,
       ...
     }@inputs:
     {
@@ -34,6 +30,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./nix/hosts/desktop
+          oxwm.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {

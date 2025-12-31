@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-    dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
+    dotfiles = "${config.home.homeDirectory}/zi-dots/config";
     
     configs = {
         oxwm = "oxwm";
@@ -14,7 +14,7 @@ in
 {
   imports = [
     ./home-modules/core.nix
-    ./home-modules/stylix.nix
+   # ./home-modules/stylix.nix
     ./home-modules/xscreensaver.nix
   ];
 

@@ -12,12 +12,18 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./../stylix.nix
+   # ./../stylix.nix
     ./../services.nix
     ./../packages.nix
     ./../gaming.nix
   ];
-
+  
+  hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.open = true; 
+  hardware.nvidia.prime = { 
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
   services.logind.settings.Login = {
     HandleLidSwitch = "suspend";
     HandleLidSwitchExternalPower = "lock";

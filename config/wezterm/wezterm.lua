@@ -8,7 +8,7 @@ config.automatically_reload_config = true
 config.enable_wayland = false
 
 -- Default Program
-config.default_prog = { '/usr/bin/fish' }
+config.default_prog = { 'fish' }
 
 -- Font
 config.font_size = 12
