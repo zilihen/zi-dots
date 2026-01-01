@@ -12,6 +12,7 @@ so the required ones are:
 - xscreensaver
 - flameshot for screenshot
 - feh for wallpaper background
+- thunar (or any file manager)
 
 # Font
 - Jetbrains Mono (Also the Nerd font for icons)
