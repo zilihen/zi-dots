@@ -14,6 +14,7 @@ so the required ones are:
 - feh for wallpaper background
 - thunar (or any file manager)
 - lxappearance for theming 
+- udiskie for auto-mounting
 
 # Font
 - Jetbrains Mono (Also the Nerd font for icons)
