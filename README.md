@@ -13,6 +13,7 @@ so the required ones are:
 - flameshot for screenshot
 - feh for wallpaper background
 - thunar (or any file manager)
+- lxappearance for theming 
 
 # Font
 - Jetbrains Mono (Also the Nerd font for icons)
