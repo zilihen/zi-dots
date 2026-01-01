@@ -11,10 +11,12 @@
 
 # Setting up on a new machine
 
-If using nixos so just clone and run. Note: Nixos configuration is not ready since I might decides to drop home manager (I hate using it)
+## If using nixos, just clone and run. 
+
 ```sh
 sudo nixos-rebuild switch --flake .#host_name
 ```
+Note: Nixos configuration is not ready since I might decides to drop home manager (I hate using it)
 
 ## Other Distros
 
