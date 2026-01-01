@@ -296,13 +296,22 @@ oxwm.key.bind({ modkey, "Control", "Shift" }, "7", oxwm.tag.toggletag(6))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
 
--- Laptop Keybinds 
-oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"))
-oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"))
+-- Laptop Keybinds
+-- oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"))
+-- oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"))
+-- oxwm.key.bind({ }, "XF86AudioMute", oxwm.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+-- oxwm.key.bind({ }, "XF86MonBrightnessUp", oxwm.spawn("brightnessctl -e4 -n2 set 5%+"))
+-- oxwm.key.bind({ }, "XF86MonBrightnessDown", oxwm.spawn("brightnessctl -e4 -n2 set 5%-"))
+
+-- script used by Endeavouros
+-- TODO fix this
+oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn({"sh", "./volume_brightness volume_up"}))
+oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("volume_brightness volume_down"))
 oxwm.key.bind({ }, "XF86AudioMute", oxwm.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
 oxwm.key.bind({ }, "XF86MonBrightnessUp", oxwm.spawn("brightnessctl -e4 -n2 set 5%+"))
 oxwm.key.bind({ }, "XF86MonBrightnessDown", oxwm.spawn("brightnessctl -e4 -n2 set 5%-"))
 oxwm.key.bind({ }, "XF86AudioPlay", oxwm.spawn("playerctl play-pause"))
+
 
 
 -------------------------------------------------------------------------------
@@ -323,7 +332,8 @@ oxwm.key.bind({ }, "XF86AudioPlay", oxwm.spawn("playerctl play-pause"))
 -- Uncomment and modify these examples, or add your own
 
 -- oxwm.autostart("picom")                                  
--- oxwm.autostart("feh --bg-scale ~/wallpaper.jpg") 
+oxwm.autostart("feh --bg-scale ~/zi-dots/wallpapers/purple_night.jpg") 
 oxwm.autostart("dunst")
 oxwm.autostart("udiskie")
+oxwm.autostart("xset r rate 250 25")
 -- oxwm.autostart("nm-applet")
