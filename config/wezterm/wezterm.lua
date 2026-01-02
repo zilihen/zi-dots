@@ -11,7 +11,7 @@ config.enable_wayland = false
 config.default_prog = { 'fish' }
 
 -- Font
-config.font_size = 12
+config.font_size = 16
 config.line_height = 1.2
 config.font = wezterm.font("JetBrains Mono", {weight = 'Bold'})
 
@@ -62,6 +62,18 @@ config.keys = {
     key = "c", 
     mods ="SUPER", 
     action = wezterm.action.CloseCurrentPane {confirm = true},
+  },
+
+  { 
+    key = "=", 
+    mods ="CTRL", 
+    action = wezterm.action.IncreaseFontSize
+  },
+
+  { 
+    key = "-", 
+    mods ="CTRL", 
+    action = wezterm.action.DecreaseFontSize
   },
 }
 
