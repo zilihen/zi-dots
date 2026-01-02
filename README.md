@@ -39,10 +39,10 @@ Will create a install script for non-nixos system but for now just symlink/rsync
 
 ```sh
 cd ~/zi-dots/config
-ln -sf ./oxwm ~/.config/oxwm
-ln -sf ./wezterm ~/.config/wezterm
-ln -sf ./fish ~/.config/fish
-ln -sf ./dunst ~/.config/dunst/
-ln -sf ./starship.toml ~/.config/starship.toml
+ln -sf "$(pwd)/oxwm" ~/.config/oxwm &
+ln -sf "$(pwd)/wezterm" ~/.config/wezterm &
+ln -sf "$(pwd)/fish" ~/.config/fish &
+ln -sf "$(pwd)/dunst" ~/.config/dunst/ &
+ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml
 ```
 For st and dmenu, cd into them and build them with `sudo make clean install`
