@@ -117,6 +117,9 @@ oxwm.set_tags(tags)
 oxwm.set_layout_symbol("tiling", "[T]")
 oxwm.set_layout_symbol("normie", "[F]")
 oxwm.set_layout_symbol("tabbed", "[=]")
+oxwm.set_layout_symbol("grid", "[G]")
+
+
 
 -------------------------------------------------------------------------------
 -- Appearance
@@ -200,7 +203,7 @@ oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 -- Launch Dmenu
 oxwm.key.bind({ modkey }, "Space", oxwm.spawn({ "sh", "-c", "dmenu_run -l 10" }))
 -- Copy screenshot to clipboard
-oxwm.key.bind({ }, "Print", oxwm.spawn({ "sh", "-c", "maim -s | xclip -selection clipboard -t image/png" }))
+oxwm.key.bind({ }, "Print", oxwm.spawn("flameshot gui"))
 oxwm.key.bind({ modkey }, "C", oxwm.client.kill()) 
 
 -- Keybind overlay - Shows important keybindings on screen
@@ -211,8 +214,9 @@ oxwm.key.bind({ modkey }, "F", oxwm.client.toggle_fullscreen())
 oxwm.key.bind({ modkey, "Control" }, "Space", oxwm.client.toggle_floating())
 
 -- Layout management
-oxwm.key.bind({ modkey }, "F", oxwm.layout.set("normie"))
-oxwm.key.bind({ modkey }, "C", oxwm.layout.set("tiling"))
+oxwm.key.bind({ modkey, "Shift" }, "F", oxwm.layout.set("normie"))
+oxwm.key.bind({ modkey, "Shift" }, "T", oxwm.layout.set("tiling"))
+oxwm.key.bind({ modkey, "Shift" }, "G", oxwm.layout.set("grid"))
 -- Cycle through layouts
 oxwm.key.bind({ modkey }, "N", oxwm.layout.cycle())
 
@@ -297,20 +301,11 @@ oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
 
 -- Laptop Keybinds
--- oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"))
--- oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"))
--- oxwm.key.bind({ }, "XF86AudioMute", oxwm.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
--- oxwm.key.bind({ }, "XF86MonBrightnessUp", oxwm.spawn("brightnessctl -e4 -n2 set 5%+"))
--- oxwm.key.bind({ }, "XF86MonBrightnessDown", oxwm.spawn("brightnessctl -e4 -n2 set 5%-"))
-
--- script used by Endeavouros
--- TODO fix this
-oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn({"sh", "./volume_brightness volume_up"}))
-oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("volume_brightness volume_down"))
-oxwm.key.bind({ }, "XF86AudioMute", oxwm.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+ && dunstify -h string:x-canonical-private-synchronous:audio \"Volume: \" -h int:value:\"`ponymix get-volume`\""))
+oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%- && dunstify -h string:x-canonical-private-synchronous:audio \"Volume: \" -h int:value:\"`ponymix get-volume`\""))
+oxwm.key.bind({ }, "XF86AudioMute", oxwm.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && dunstify -h string:x-canonical-private-synchronous:audio \"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\""))
 oxwm.key.bind({ }, "XF86MonBrightnessUp", oxwm.spawn("brightnessctl -e4 -n2 set 5%+"))
 oxwm.key.bind({ }, "XF86MonBrightnessDown", oxwm.spawn("brightnessctl -e4 -n2 set 5%-"))
-oxwm.key.bind({ }, "XF86AudioPlay", oxwm.spawn("playerctl play-pause"))
 
 
 
