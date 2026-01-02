@@ -20,9 +20,7 @@ so the required ones are:
 - Jetbrains Mono (Also the Nerd font for icons)
 
 # Current TODO
-- Fix st not running fish shell when launched
-- get volume and brightness control to work with dunst via keybinds.
-- Xscreensaver for some odd reason did not work
+- Nothing to do
 
 # Setting up on a new machine
 
