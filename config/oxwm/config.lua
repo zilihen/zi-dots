@@ -301,8 +301,8 @@ oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
 
 -- Laptop Keybinds
-oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+ && dunstify -h string:x-canonical-private-synchronous:audio \"Volume: \" -h int:value:\"`ponymix get-volume`\""))
-oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%- && dunstify -h string:x-canonical-private-synchronous:audio \"Volume: \" -h int:value:\"`ponymix get-volume`\""))
+oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+ && dunstify -h string:x-canonical-private-synchronous:audio \"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\""))
+oxwm.key.bind({ }, "XF86AudioLowerVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%- && dunstify -h string:x-canonical-private-synchronous:audio \"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\""))
 oxwm.key.bind({ }, "XF86AudioMute", oxwm.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && dunstify -h string:x-canonical-private-synchronous:audio \"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\""))
 oxwm.key.bind({ }, "XF86MonBrightnessUp", oxwm.spawn("brightnessctl -e4 -n2 set 5%+"))
 oxwm.key.bind({ }, "XF86MonBrightnessDown", oxwm.spawn("brightnessctl -e4 -n2 set 5%-"))
