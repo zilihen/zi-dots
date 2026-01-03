@@ -42,7 +42,7 @@ cd ~/zi-dots/config
 ln -sf "$(pwd)/oxwm" ~/.config/oxwm &
 ln -sf "$(pwd)/wezterm" ~/.config/wezterm &
 ln -sf "$(pwd)/fish" ~/.config/fish &
-ln -sf "$(pwd)/dunst" ~/.config/dunst/ &
+ln -sf "$(pwd)/dunst" ~/.config/dunst &
 ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml
 ```
 For st and dmenu, cd into them and build them with `sudo make clean install`
