@@ -13,7 +13,7 @@ so the required ones are:
 - flameshot for screenshot
 - feh for wallpaper background
 - thunar (or any file manager)
-- lxappearance for theming 
+- nwg-look for theming
 - udiskie for auto-mounting
 
 # Font
