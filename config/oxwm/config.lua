@@ -333,3 +333,18 @@ oxwm.autostart("udiskie")
 oxwm.autostart("xset r rate 250 25")
 oxwm.autostart("xrandr --output eDP-1 --dpi 120")
 -- oxwm.autostart("nm-applet")
+
+-------------------------------------------------------------------------------
+-- Rules
+-------------------------------------------------------------------------------
+
+oxwm.rule.add({ 
+    class = "steam",
+    floating = true,
+    tag = 4,
+})
+
+oxwm.rule.add({ 
+    class = "discord",
+    tag = 2,
+})
