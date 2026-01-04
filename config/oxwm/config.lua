@@ -276,29 +276,29 @@ oxwm.key.bind({ modkey, "Control" }, "7", oxwm.tag.move_to(6))
 oxwm.key.bind({ modkey, "Control" }, "8", oxwm.tag.move_to(7))
 oxwm.key.bind({ modkey, "Control" }, "9", oxwm.tag.move_to(8))
 
--- Combo view (view multiple tags at once) {argos_nothing}
--- Example: Mod+Ctrl+2 while on tag 1 will show BOTH tags 1 and 2
-oxwm.key.bind({ modkey, "Shift" }, "1", oxwm.tag.toggleview(0))
-oxwm.key.bind({ modkey, "Shift" }, "2", oxwm.tag.toggleview(1))
-oxwm.key.bind({ modkey, "Shift" }, "3", oxwm.tag.toggleview(2))
-oxwm.key.bind({ modkey, "Shift" }, "4", oxwm.tag.toggleview(3))
-oxwm.key.bind({ modkey, "Shift" }, "5", oxwm.tag.toggleview(4))
-oxwm.key.bind({ modkey, "Shift" }, "6", oxwm.tag.toggleview(5))
-oxwm.key.bind({ modkey, "Shift" }, "7", oxwm.tag.toggleview(6))
-oxwm.key.bind({ modkey, "Shift" }, "8", oxwm.tag.toggleview(7))
-oxwm.key.bind({ modkey, "Shift" }, "9", oxwm.tag.toggleview(8))
+-- -- Combo view (view multiple tags at once) {argos_nothing}
+-- -- Example: Mod+Ctrl+2 while on tag 1 will show BOTH tags 1 and 2
+-- oxwm.key.bind({ modkey, "Shift" }, "1", oxwm.tag.toggleview(0))
+-- oxwm.key.bind({ modkey, "Shift" }, "2", oxwm.tag.toggleview(1))
+-- oxwm.key.bind({ modkey, "Shift" }, "3", oxwm.tag.toggleview(2))
+-- oxwm.key.bind({ modkey, "Shift" }, "4", oxwm.tag.toggleview(3))
+-- oxwm.key.bind({ modkey, "Shift" }, "5", oxwm.tag.toggleview(4))
+-- oxwm.key.bind({ modkey, "Shift" }, "6", oxwm.tag.toggleview(5))
+-- oxwm.key.bind({ modkey, "Shift" }, "7", oxwm.tag.toggleview(6))
+-- oxwm.key.bind({ modkey, "Shift" }, "8", oxwm.tag.toggleview(7))
+-- oxwm.key.bind({ modkey, "Shift" }, "9", oxwm.tag.toggleview(8))
 
--- Multi tag (window on multiple tags)
--- Example: Mod+Ctrl+Shift+2 puts focused window on BOTH current tag and tag 2
-oxwm.key.bind({ modkey, "Control", "Shift" }, "1", oxwm.tag.toggletag(0))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "2", oxwm.tag.toggletag(1))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "3", oxwm.tag.toggletag(2))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "4", oxwm.tag.toggletag(3))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "5", oxwm.tag.toggletag(4))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "6", oxwm.tag.toggletag(5))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "7", oxwm.tag.toggletag(6))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
-oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
+-- -- Multi tag (window on multiple tags)
+-- -- Example: Mod+Ctrl+Shift+2 puts focused window on BOTH current tag and tag 2
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "1", oxwm.tag.toggletag(0))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "2", oxwm.tag.toggletag(1))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "3", oxwm.tag.toggletag(2))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "4", oxwm.tag.toggletag(3))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "5", oxwm.tag.toggletag(4))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "6", oxwm.tag.toggletag(5))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "7", oxwm.tag.toggletag(6))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
+-- oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
 
 -- Laptop Keybinds
 oxwm.key.bind({ }, "XF86AudioRaiseVolume", oxwm.spawn("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+ && dunstify -h string:x-canonical-private-synchronous:audio \"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\""))
