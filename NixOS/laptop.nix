@@ -12,33 +12,14 @@
 {
   imports = [
     ./hardware-configuration.nix
-   # ./../stylix.nix
-    ./../services.nix
-    ./../packages.nix
-    ./../gaming.nix
   ];
   
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.open = true; 
-  hardware.nvidia.prime = { 
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
-  };
   services.logind.settings.Login = {
     HandleLidSwitch = "suspend";
     HandleLidSwitchExternalPower = "lock";
     HandleLidSwitchDocked = "ignore";
     HandlePowerKey = "suspend";
     HandlePowerKeyLongPress = "poweroff";
-  };
-
-  nix = {
-    settings.auto-optimise-store = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
   };
 
   networking.hostName = "nixos-laptop"; # Define your hostname.
@@ -63,17 +44,6 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
-  };
-
-  # Define user
-  users.users.chen = {
-    isNormalUser = true;
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "video"
-    ];
-    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
