@@ -1,7 +1,7 @@
 { 
   programs.wezterm.enable = true;
   programs.fish.enable = true;
-  
+
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM = true;
 
@@ -13,5 +13,13 @@
       user.email = "jasonchen7766@gmail.com";
       }
     ];
+  };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = false;
+    gamescopeSession.enable = true;
+    extraCompatPackages = [ ];
   };
 }

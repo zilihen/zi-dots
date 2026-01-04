@@ -8,7 +8,6 @@
 { 
 
   imports = [
-    ./gaming.nix
     ./program.nix
     ./services.nix
     ./stylix.nix
