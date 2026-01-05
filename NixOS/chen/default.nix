@@ -10,7 +10,7 @@
   imports = [
     ./program.nix
     ./services.nix
-    ./stylix.nix
+    # ./stylix.nix
   ]; 
 
   nix = {
@@ -36,7 +36,6 @@
       nerd-fonts.jetbrains-mono
       kdePackages.breeze
       kdePackages.breeze-gtk
-      ashell
 
       # basic packages that I need/want
       hyprpaper

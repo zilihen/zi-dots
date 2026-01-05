@@ -43,15 +43,6 @@
     # displayManager.startx.enable = true;
   };
 
-  # services.greetd = {
-  #   enable = true;
-  #   settings.default_session = {
-  #     user = "chen";
-  #     # command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-  #     command = "Hyprland";
-  #   };
-  # };
-
   # Sounds is good
   services.pipewire = {
     enable = true;
@@ -60,13 +51,11 @@
     alsa.support32Bit = true;
     wireplumber.enable = true;
     jack.enable = true;
-
   };
 
   # Security is good
   security = {
     polkit.enable = true;
-    # pam.services.xscreensaver.enable = true;
     pam.services.hyprlock = {};
   };
 
@@ -81,6 +70,7 @@
     config.common.default = ["gtk"];
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-hyprland
     ];
     configPackages = [ pkgs.hyprland ];
