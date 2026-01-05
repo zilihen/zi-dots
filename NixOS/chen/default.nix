@@ -39,6 +39,7 @@
       ashell
 
       # basic packages that I need/want
+      hyprpaper
       nwg-look 
       wget
       zip
