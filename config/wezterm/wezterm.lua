@@ -13,7 +13,7 @@ config.default_prog = { 'fish' }
 -- Font
 config.font_size = 16
 config.line_height = 1.2
-config.font = wezterm.font("JetBrains Mono", {weight = 'Bold'})
+config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = 'Bold'})
 
 -- Colors
 config.color_scheme = "Builtin Dark"
