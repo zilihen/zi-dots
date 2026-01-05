@@ -40,6 +40,9 @@
 
       # basic packages that I need/want
       hyprpaper
+      hyprshot
+      hyprpicker
+      
       nwg-look 
       wget
       zip

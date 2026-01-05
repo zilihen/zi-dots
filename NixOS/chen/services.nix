@@ -67,6 +67,7 @@
   security = {
     polkit.enable = true;
     # pam.services.xscreensaver.enable = true;
+    pam.services.hyprlock = {};
   };
 
   hardware = {
