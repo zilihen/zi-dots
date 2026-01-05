@@ -31,12 +31,15 @@
     ];
     packages = with pkgs; [ 
 
-      # font packages 
+      # fonts, theme, and icon packages
       jetbrains-mono
       nerd-fonts.jetbrains-mono
+      kdePackages.breeze
+      kdePackages.breeze-gtk
+      ashell
 
-      # basic packages that I need
-      nixfmt-rfc-style
+      # basic packages that I need/want
+      nwg-look 
       wget
       zip
       unzip
@@ -50,7 +53,7 @@
       gtksourceview3
       libchamplain_libsoup3
       brightnessctl
-      pwvucontrol
+      pavucontrol
       playerctl
       spotify
       ani-cli
@@ -61,7 +64,8 @@
       dunst
       btop
 
-      # Developer tools that I use
+      # Developer tools snd software that I use
+      nixfmt-rfc-style
       wezterm
       jdk
       cargo
