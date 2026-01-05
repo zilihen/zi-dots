@@ -332,7 +332,7 @@ oxwm.autostart("dunst")
 oxwm.autostart("udiskie")
 oxwm.autostart("xset r rate 250 25")
 oxwm.autostart("xrandr --output eDP-1 --dpi 120")
--- oxwm.autostart("nm-applet")
+oxwm.autostart("nm-applet")
 
 -------------------------------------------------------------------------------
 -- Rules
@@ -346,5 +346,5 @@ oxwm.rule.add({
 
 oxwm.rule.add({ 
     class = "discord",
-    tag = 2,
+    tag = 3,
 })
