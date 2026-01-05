@@ -56,7 +56,7 @@
   # Security is good
   security = {
     polkit.enable = true;
-    pam.services.hyprlock = {};
+    # pam.services.hyprlock = {};
   };
 
   hardware = {

@@ -37,11 +37,8 @@
       kdePackages.breeze
       kdePackages.breeze-gtk
 
-      # basic packages that I need/want
-      hyprpaper
-      hyprshot
-      hyprpicker
-      
+      # basic packages that I need/want     
+      quickshell
       nwg-look 
       wget
       zip
