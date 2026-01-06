@@ -5,7 +5,7 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 
 config.automatically_reload_config = true
-config.enable_wayland = false
+config.enable_wayland = true
 
 -- Default Program
 config.default_prog = { 'fish' }
@@ -14,6 +14,7 @@ config.default_prog = { 'fish' }
 config.font_size = 16
 config.line_height = 1.2
 config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = 'Bold'})
+config.front_end = 'WebGpu'
 
 -- Colors
 config.color_scheme = "Builtin Dark"
@@ -27,7 +28,7 @@ config.colors = {
   selection_bg = '#ffffff',
   split = '#444444',
  ansi = {
-      'black', -- black
+      '#1e1e1e', -- black
       'red', -- red
       'green', -- green
       'yellow', -- yellow
@@ -37,7 +38,7 @@ config.colors = {
       'white', -- white
    },
    brights = {
-      'black', -- black
+      '#555555', -- black
       'red', -- red
       'green', -- green
       'yellow', -- yellow
