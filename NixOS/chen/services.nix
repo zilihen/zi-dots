@@ -5,9 +5,13 @@
 }:
 
 {
+  # KDE plasma 
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = false; # disable this we are using ly as our display manager
+  xdg.portal.extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
+
   services.upower.enable = true;
   services.blueman.enable = true;
-
   services.printing = {
     enable = true;
     drivers = with pkgs; [
@@ -17,30 +21,9 @@
       cups-filters
     ];
   };
-
   services.avahi = {
     enable = true;
     nssmdns4 = true;
-  };
-
-  services.libinput.enable = true;
-  services.libinput.touchpad = {
-    tapping = true;
-    naturalScrolling = true;
-    clickMethod = "buttonareas";
-    scrollMethod = "twofinger";
-    accelProfile = "adaptive";
-    accelSpeed = "0";
-  };
-  
-  services.displayManager.ly.enable = true;
-  services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    autoRepeatDelay = 250;
-    autoRepeatInterval = 25;
-    # windowManager.oxwm.enable = true;
-    # displayManager.startx.enable = true;
   };
 
   # Sounds is good
@@ -53,26 +36,24 @@
     jack.enable = true;
   };
 
-  # Security is good
-  security = {
-    polkit.enable = true;
-    # pam.services.hyprlock = {};
-  };
+  services.displayManager.ly.enable = true;
 
-  hardware = {
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = true;
+  # X-Server stuff, not really needed therefore can comment everything below out
+  services.libinput.enable = true;
+  services.libinput.touchpad = {
+    tapping = true;
+    naturalScrolling = true;
+    clickMethod = "clickfinger";
+    scrollMethod = "twofinger";
+    accelProfile = "adaptive";
+    accelSpeed = "0";
   };
-
-  xdg.portal = {
+  services.xserver = {
     enable = true;
-    xdgOpenUsePortal = true; 
-    config.common.default = ["gtk"];
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-hyprland
-    ];
-    configPackages = [ pkgs.hyprland ];
+    xkb.layout = "us";
+    autoRepeatDelay = 250;
+    autoRepeatInterval = 25;
+    # windowManager.oxwm.enable = true;
+    # displayManager.startx.enable = true;
   };
 }
