@@ -60,7 +60,7 @@ config.hide_tab_bar_if_only_one_tab = true
 -- Key Bindings
 config.keys = {
   { 
-    key = "c", 
+    key = "q", 
     mods ="SUPER", 
     action = wezterm.action.CloseCurrentPane {confirm = true},
   },

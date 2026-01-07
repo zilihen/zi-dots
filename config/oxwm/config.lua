@@ -204,7 +204,7 @@ oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 oxwm.key.bind({ modkey }, "Space", oxwm.spawn({ "sh", "-c", "dmenu_run -l 10" }))
 -- Copy screenshot to clipboard
 oxwm.key.bind({ }, "Print", oxwm.spawn("flameshot gui"))
-oxwm.key.bind({ modkey }, "C", oxwm.client.kill()) 
+oxwm.key.bind({ modkey }, "Q", oxwm.client.kill()) 
 
 -- Keybind overlay - Shows important keybindings on screen
 oxwm.key.bind({ modkey, "Control" }, "Slash", oxwm.show_keybinds())
