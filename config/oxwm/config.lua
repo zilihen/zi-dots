@@ -333,7 +333,7 @@ oxwm.autostart("udiskie")
 oxwm.autostart("xset r rate 250 25")
 oxwm.autostart("xrandr --output eDP-1 --dpi 120")
 oxwm.autostart("nm-applet")
-
+oxwm.autostart("echo 'Xft.dpi: 120' | xrdb -merge")
 -------------------------------------------------------------------------------
 -- Rules
 -------------------------------------------------------------------------------
