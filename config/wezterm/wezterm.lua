@@ -5,7 +5,7 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 
 config.automatically_reload_config = true
-config.enable_wayland = true
+config.enable_wayland = false
 
 -- Default Program
 config.default_prog = { 'fish' }
@@ -49,7 +49,7 @@ config.colors = {
 }
 
 -- Windows and appearance
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 config.window_background_opacity = 0.9
 config.window_close_confirmation = "NeverPrompt"
 config.default_cursor_style = "BlinkingBar"

@@ -10,7 +10,7 @@ let
     hypr = "hypr"; 
     dunst = "dunst";
     oxwm = "oxwm";
-    wezterm = "qtile";
+    wezterm = "wezterm";
     fish = "fish"; 
     "starship.toml" = "starship.toml"; 
   };
@@ -43,6 +43,8 @@ in
       pkgs.xdg-desktop-portal-wlr
     ];
   };
+
+  xdg.icons.fallbackCursorThemes = [ "breeze_cursors" ];
 
   nix = {
     settings.auto-optimise-store = true;
@@ -94,9 +96,11 @@ in
       starship
       dunst
       btop
+      xorg.xrdb
+      xsettingsd
 
       # Developer tools and software that I use
-      nixfmt-rfc-style
+      nixfmt
       wezterm
       jdk
       cargo

@@ -14,12 +14,6 @@
   services.blueman.enable = true;
   services.printing = {
     enable = true;
-    drivers = with pkgs; [
-      gutenprint
-      canon-cups-ufr2
-      cnijfilter2
-      cups-filters
-    ];
   };
   services.avahi = {
     enable = true;

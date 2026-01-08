@@ -13,7 +13,9 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
   ];
-  
+
+  hardware.nvidia.open = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
   services.logind.settings.Login = {
     HandleLidSwitch = "suspend";
     HandleLidSwitchExternalPower = "lock";
