@@ -5,10 +5,21 @@
   ...
 }:
 
+let
+  configs = {
+    hypr = "hypr"; 
+    dunst = "dunst";
+    oxwm = "oxwm";
+    wezterm = "qtile";
+    fish = "fish"; 
+    "starship.toml" = "starship.toml"; 
+  };
+in
+
 { 
 
   imports = [
-    ./program.nix
+    ./programs.nix
     ./services.nix
     # ./stylix.nix
   ]; 
@@ -84,7 +95,7 @@
       dunst
       btop
 
-      # Developer tools snd software that I use
+      # Developer tools and software that I use
       nixfmt-rfc-style
       wezterm
       jdk
@@ -93,5 +104,13 @@
       vscode
       gh
     ];
+  };
+
+  hjem.users.chen = { 
+    user = "chen";
+    directory = "/home/chen";
+    xdg.config.files = builtins.mapAttrs (name: subpath: { 
+      source = "/home/chen/zi-dots/config/${subpath}";
+    }) configs; 
   };
 }

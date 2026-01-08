@@ -17,7 +17,6 @@ config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = 'Bold'})
 config.front_end = 'WebGpu'
 
 -- Colors
-config.color_scheme = "Builtin Dark"
 config.colors = {
   cursor_border = "white",
   foreground = '#ffffff',
@@ -27,7 +26,7 @@ config.colors = {
   selection_fg = 'black',
   selection_bg = '#ffffff',
   split = '#444444',
- ansi = {
+  ansi = {
       '#1e1e1e', -- black
       'red', -- red
       'green', -- green

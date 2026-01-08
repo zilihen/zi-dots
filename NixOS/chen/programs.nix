@@ -5,22 +5,23 @@
   ...
 }:
 
-{ 
+{
   programs.thunar.enable = true;
-  programs.wezterm.enable = true;
   programs.fish.enable = true;
-  programs.hyprland = { 
+  programs.hyprland = {
     enable = true;
-    withUWSM = false; 
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    withUWSM = false;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
   };
   programs.git = {
     enable = true;
     config = [
       {
-      user.name = "zi";
-      user.email = "jasonchen7766@gmail.com";
+        user.name = "zi";
+        user.email = "jasonchen7766@gmail.com";
       }
     ];
   };
