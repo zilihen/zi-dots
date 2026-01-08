@@ -7,7 +7,7 @@
 {
   # KDE plasma 
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = false; # disable this we are using ly as our display manager
+  services.displayManager.sddm.enable = true;
   xdg.portal.extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
 
   services.upower.enable = true;
@@ -36,7 +36,7 @@
     jack.enable = true;
   };
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.ly.enable = false;
 
   # X-Server stuff, not really needed therefore can comment everything below out
   services.libinput.enable = true;
