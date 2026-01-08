@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias nrsf='sudo nixos-rebuild switch --impure --flake .'
 starship init fish | source 
 
 if type -q opam 
