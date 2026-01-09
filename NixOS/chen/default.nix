@@ -70,8 +70,6 @@ in
       # fonts, theme, and icon packages
       jetbrains-mono
       nerd-fonts.jetbrains-mono
-      kdePackages.breeze
-      kdePackages.breeze-gtk
 
       # basic packages that I need/want     
       quickshell
@@ -83,12 +81,7 @@ in
       udiskie
       bluez
       bluez-tools
-      libgtop
-      dart-sass
       wl-clipboard
-      gvfs
-      gtksourceview3
-      libchamplain_libsoup3
       brightnessctl
       pavucontrol
       playerctl
@@ -100,8 +93,8 @@ in
       starship
       dunst
       btop
-      xorg.xrdb
-      xsettingsd
+      libreoffice
+
 
       # Developer tools and software that I use
       nixfmt
