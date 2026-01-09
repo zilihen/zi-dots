@@ -17,11 +17,14 @@ let
 in
 
 { 
-
   imports = [
     ./programs.nix
     ./services.nix
   ]; 
+
+  environment.variables = { 
+    NIXOS_OZONE_WL = 1;
+  };
 
   # Security is good
   security = {
