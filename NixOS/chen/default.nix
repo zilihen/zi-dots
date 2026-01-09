@@ -20,6 +20,7 @@ in
   imports = [
     ./programs.nix
     ./services.nix
+    #./vm.nix
   ]; 
 
   environment.sessionVariables = { 
@@ -64,6 +65,7 @@ in
       "networkmanager"
       "wheel"
       "video"
+      "libvirtd"
     ];
     packages = with pkgs; [ 
 
@@ -94,7 +96,6 @@ in
       dunst
       btop
       libreoffice
-
 
       # Developer tools and software that I use
       nixfmt
