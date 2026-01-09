@@ -27,6 +27,7 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = false;
     gamescopeSession.enable = true;
+    extraPackages = with pkgs; [ kdePackages.breeze ];
     extraCompatPackages = [ ];
   };
 }

@@ -14,17 +14,7 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  hardware.nvidia.open = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  services.logind.settings.Login = {
-    HandleLidSwitch = "suspend";
-    HandleLidSwitchExternalPower = "lock";
-    HandleLidSwitchDocked = "ignore";
-    HandlePowerKey = "suspend";
-    HandlePowerKeyLongPress = "poweroff";
-  };
-
-  networking.hostName = "nixos-laptop"; # Define your hostname.
+  networking.hostName = "nixos-desktop"; # Define your hostname.
 
   # bootloader
   boot.loader.systemd-boot.enable = true;

@@ -21,7 +21,6 @@ in
   imports = [
     ./programs.nix
     ./services.nix
-    # ./stylix.nix
   ]; 
 
   # Security is good
