@@ -9,7 +9,7 @@ I currently use KDE plasma, I will probably create a quickshell config at some p
 
 # Installation 
 
-Make sure you have `nix-command` and `flakes` installed on your system. `cd` into and edit `/etc/nixos/configuration.nix` and add.
+Make sure you have `nix-command` and `flakes` installed on your system. `cd` into then edit `/etc/nixos/configuration.nix` and add.
 
 ```nix
 nix.settings.experimental-features = ["nix-command" "flakes"];
