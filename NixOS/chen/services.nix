@@ -8,6 +8,7 @@
   # KDE plasma 
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.enable = true;
+  services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
 
   services.upower.enable = true;

@@ -96,6 +96,7 @@ in
       dunst
       btop
       libreoffice
+      heroic
 
       # Developer tools and software that I use
       nixfmt
