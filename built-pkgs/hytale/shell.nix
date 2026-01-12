@@ -12,6 +12,7 @@ let
   hytale-launcher-fhs = pkgs.buildFHSEnv {
     name = "hytale-launcher-fhs";
 
+    # depenencies needed
     targetPkgs =
       pkgs: with pkgs; [
         webkitgtk_4_1
