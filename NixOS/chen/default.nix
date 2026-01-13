@@ -7,23 +7,23 @@
 
 let
   configs = {
-    hypr = "hypr"; 
+    hypr = "hypr";
     dunst = "dunst";
     oxwm = "oxwm";
     wezterm = "wezterm";
-    fish = "fish"; 
-    "starship.toml" = "starship.toml"; 
+    fish = "fish";
+    "starship.toml" = "starship.toml";
   };
 in
 
-{ 
+{
   imports = [
     ./programs.nix
     ./services.nix
     #./vm.nix
-  ]; 
+  ];
 
-  environment.sessionVariables = { 
+  environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
   };
@@ -40,8 +40,8 @@ in
 
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true; 
-    config.common.default = ["gtk"];
+    xdgOpenUsePortal = true;
+    config.common.default = [ "gtk" ];
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-wlr
@@ -59,6 +59,18 @@ in
     };
   };
 
+  fonts = {
+    fontDir.enable = true;
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      jetbrains-mono
+      nerd-fonts.jetbrains-mono
+    ];
+  };
+
   users.users.chen = {
     isNormalUser = true;
     extraGroups = [
@@ -67,15 +79,10 @@ in
       "video"
       "libvirtd"
     ];
-    packages = with pkgs; [ 
-
-      # fonts, theme, and icon packages
-      jetbrains-mono
-      nerd-fonts.jetbrains-mono
-
-      # basic packages that I need/want     
+    packages = with pkgs; [
+      # basic packages that I need/want
       quickshell
-      nwg-look 
+      nwg-look
       electron
       wget
       zip
@@ -109,11 +116,11 @@ in
     ];
   };
 
-  hjem.users.chen = { 
+  hjem.users.chen = {
     user = "chen";
     directory = "/home/chen";
-    xdg.config.files = builtins.mapAttrs (name: subpath: { 
+    xdg.config.files = builtins.mapAttrs (name: subpath: {
       source = "/home/chen/zi-dots/config/${subpath}";
-    }) configs; 
+    }) configs;
   };
 }
