@@ -20,7 +20,7 @@ in
   imports = [
     ./programs.nix
     ./services.nix
-    #./vm.nix
+    ./vm.nix
   ];
 
   environment.sessionVariables = {
@@ -104,10 +104,12 @@ in
       btop
       libreoffice
       heroic
+      docker
 
       # Developer tools and software that I use
       nixfmt
       wezterm
+      foot
       jdk
       cargo
       gcc

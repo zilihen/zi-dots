@@ -1,10 +1,13 @@
+{pkgs, ...}: 
+
 { 
   programs.virt-manager.enable = true;
-  users.gropus.libvirtd.members = ["chen"];
+  users.groups.libvirtd.members = ["chen"];
   virtualisation.libvirtd = { 
     enable = true;
     qemu = { 
-      swtpm.enable = true
+      swtpm.enable = true;
+      vhostUserPackages = with pkgs; [ virtiofsd ];
     };
   };
   virtualisation.spiceUSBRedirection.enable = true;
