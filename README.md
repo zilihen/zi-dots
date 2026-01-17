@@ -1,7 +1,7 @@
 # Zi's Dots
 I currently run NixOS. Yep went back to nix, found it a bit more convenience to set up. 
 
-I currently use KDE plasma, I will probably create a quickshell config at some point in the future for hyprland but right now KDE plasma will do. 
+I currently use Cosmic DE, I will probably create a quickshell config at some point in the future for hyprland but right now Cosmic will do. 
 
 > [!note] 
 > I do not use home-manager for my setup, I have used it before and found it very frustrating to use. Instead, I use hjem to manage all my dots files stored in `config` directory which are symlinked by their respective directory in `~/.config`. This makes it easy to set up the configurations in other distro without using home-manager and nix.
