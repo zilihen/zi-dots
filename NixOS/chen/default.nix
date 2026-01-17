@@ -82,8 +82,10 @@ in
     ];
     packages = with pkgs; [
 
-      # Cursor
+      # cursors, and theme
       bibata-cursors
+      kdePackages.breeze
+      kdePackages.breeze-gtk
 
       # basic packages that I need/want
       quickshell
