@@ -27,7 +27,8 @@ Things you may want to change:
 - Delete both `laptop.nix` and `desktop.nix` then put your desired configuration file for your system. Make sure to edit `flake.nix` to import that file accordingly.
 - Change the hostname in `flake.nix` to yours by editing the line that says something along the line `nixosConfigurations.*`, then change the `*` to your desired hostname. 
 - Create a folder with your username then put the packages and programs that you want in there and again, make sure to edit `flake.nix` accordingly. 
-- Delete certain configuration for program that you may not use in `config` folder.
+- Delete any configuration for programs that you may not use in `config` folder.
+
 These are things that I would do but you can do whatever you want. If you wish to use home-manager just follow the instructions on their github page to setup. \br
 
 Then when you are finish, run:
