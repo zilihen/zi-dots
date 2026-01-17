@@ -22,6 +22,7 @@ git clone https://github.com/zilihen/zi-dots.git
 ```
 
 You may want to edit certain things in the `NixOS` directory and `flake.nix` file. 
+
 Things you may want to change:
 - Delete both `laptop.nix` and `desktop.nix` then put your desired configuration file for your system. Make sure to edit `flake.nix` to import that file accordingly.
 - Change the hostname in `flake.nix` to yours by editing the line that says something along the line `nixosConfigurations.*`, then change the `*` to your desired hostname, make sure it matches with your `networking.hostName` that you have set.
