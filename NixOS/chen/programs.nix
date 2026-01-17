@@ -27,7 +27,7 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = false;
     gamescopeSession.enable = true;
-    extraPackages = with pkgs; [ kdePackages.breeze ]; # Add kdePackages.breeze into steam fhs environment to fix cursor problem
+    extraPackages = with pkgs; [ bibata-cursors ]; # Add kdePackages.breeze into steam fhs environment to fix cursor problem
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 }

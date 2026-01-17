@@ -12,6 +12,7 @@ let
     oxwm = "oxwm";
     wezterm = "wezterm";
     fish = "fish";
+    cosmic = "cosmic";
     "starship.toml" = "starship.toml";
   };
 in
@@ -48,7 +49,7 @@ in
     ];
   };
 
-  xdg.icons.fallbackCursorThemes = [ "breeze_cursors" ];
+  xdg.icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
 
   nix = {
     settings.auto-optimise-store = true;
@@ -80,6 +81,10 @@ in
       "libvirtd"
     ];
     packages = with pkgs; [
+
+      # Cursor
+      bibata-cursors
+
       # basic packages that I need/want
       quickshell
       nwg-look

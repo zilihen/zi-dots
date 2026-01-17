@@ -5,11 +5,11 @@
 }:
 
 {
-  # KDE plasma 
-  services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
+  # Cosmic 
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   services.flatpak.enable = true;
-  xdg.portal.extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-cosmic ];
 
   services.upower.enable = true;
   services.blueman.enable = true;
