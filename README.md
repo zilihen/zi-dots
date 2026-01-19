@@ -16,6 +16,7 @@ Directories and files pertaining to NixOS:
 
 ## Fedora Atomic Image
 Directories and files pertaining to Fedora Atomic Image:
+- `.github/` - workflow for builting the image
 - `files/` - contains all files part of the image build process
 - `modules/` - custom module if I want to make any
 - `recipes/` - contains configuration for atomic desktop/image. Currently, only Fedora Cosmic Atomic. 
