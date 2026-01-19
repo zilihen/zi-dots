@@ -19,7 +19,6 @@ modules:
     repos:
       copr:
         - atim/starship
-        - aleasto/waydroid
         - stefan-maassen/wezterm
     install:
       packages:
