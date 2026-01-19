@@ -1,6 +1,6 @@
 # Zi's Dots &nbsp; [![bluebuild build badge](https://github.com/zilihen/zi-dots/actions/workflows/build.yml/badge.svg)](https://github.com/zilihen/zi-dots/actions/workflows/build.yml)
 
-This repo pertains to NixOS and Fedora Atomic Desktop. I currently use both setup. I use Cosmic DE as my main desktop environment on both system. I may create a quickshell in the future for hyprland but for now Cosmic will do.
+This repo pertains to both my NixOS and Fedora Atomic Desktop. Cosmic DE is the main desktop environment I use on both systems. A quickshell configuration may be created in the future for hyprland but for now Cosmic will do.
 
 
 
