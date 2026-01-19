@@ -112,6 +112,7 @@ in
       libreoffice
       heroic
       docker
+      cosign
 
       # Developer tools and software that I use
       nixfmt
