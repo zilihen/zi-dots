@@ -7,6 +7,21 @@ This repo pertains to NixOS and Fedora Atomic Desktop. I currently use both setu
 > [!note] 
 > I do not use home-manager for my NixOS setup, I have used it before and found it very frustrating to use. Instead, I use hjem to manage all my dots files stored in `config` directory which are symlinked by their respective directory in `~/.config`. This makes it easy to set up the configurations in other distro without using home-manager and nix.
 
+## NixOS Configuration
+Directories and files pertaining to NixOS:
+- `config/` - this contains all my configuration files
+- `NixOS/` - this contains all my system and user nix files for NixOS
+- `flake.nix`
+- `flake.lock`
+
+## Fedora Atomic Image
+Directories and files pertaining to Fedora Atomic Image:
+- `files/` - contains all files part of the image build process
+- `modules/` - custom module if I want to make any
+- `recipes/` - contains configuration for atomic desktop/image. Currently, only Fedora Cosmic Atomic. 
+
+This image is built using BlueBuild template, go check it out [here](https://github.com/blue-build/template).
+
 
 # Installation 
 
