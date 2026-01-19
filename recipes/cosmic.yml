@@ -34,13 +34,24 @@ modules:
         - adwaita-cursor-theme
         - adwaita-fonts-all
         - adwaita-icon-theme
+        - NetworkManager
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  
+  - type: fonts
+    fonts: 
+      nerd-fonts: 
+        - JetBrainsMono
 
+  - type: systemd
+    system: 
+      enabled: 
+        - NetworkManager.service
+    
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
