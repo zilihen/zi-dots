@@ -7,6 +7,7 @@
 
 {
   virtualisation.waydroid.enable = true;
+  virtualisation.docker.enable = true;
   programs.fish.enable = true;
   programs.hyprland = {
     enable = true;
