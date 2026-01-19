@@ -22,6 +22,7 @@ modules:
         - stefan-maassen/wezterm
     install:
       packages:
+        - fastfetch
         - btop
         - helix
         - fish
