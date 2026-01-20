@@ -32,10 +32,11 @@ modules:
         - waydroid
         - git
         - steam
-        - NetworkManager-tui
-      exclude: 
+        - pipewire-alsa.x86_64
         - pipewire-alsa.i686
+        - pipewire-libs.x86_64
         - pipewire-libs.i686
+        - NetworkManager-tui
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
