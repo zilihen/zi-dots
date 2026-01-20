@@ -22,6 +22,7 @@ modules:
         - stefan-maassen/wezterm
       nonfree: rpmfusion
     install:
+      skip-broken: true
       packages:
         - fastfetch
         - btop
@@ -38,8 +39,6 @@ modules:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - pipewire-libs.i686
-        - pipewire-alsa.i686
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
   
