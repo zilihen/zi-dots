@@ -32,7 +32,9 @@ modules:
         - waydroid
         - git
         - steam
-        - NetworkManager
+        - pipewire
+        - pipewire-libs
+        - pipewire-alsa
         - NetworkManager-tui
     remove:
       packages:
