@@ -20,6 +20,7 @@ modules:
       copr:
         - atim/starship
         - stefan-maassen/wezterm
+      nonfree: rpmfusion
     install:
       packages:
         - fastfetch
@@ -30,10 +31,7 @@ modules:
         - starship
         - waydroid
         - git
-        - lxappearance 
-        - adwaita-cursor-theme
-        - adwaita-fonts-all
-        - adwaita-icon-theme
+        - steam
         - NetworkManager
         - NetworkManager-tui
     remove:
@@ -64,7 +62,6 @@ modules:
           - com.discordapp.Discord
           - org.libreoffice.LibreOffice
           - com.heroicgameslauncher.hgl
-          - com.valvesoftware.Steam
           - org.prismlauncher.PrismLauncher
       - scope: user # Also add Flathub user repo, but no user packages
 
