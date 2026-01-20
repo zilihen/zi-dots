@@ -20,7 +20,7 @@ modules:
       copr:
         - atim/starship
         - stefan-maassen/wezterm
-      nonfree: rpmfusion
+      nonfree: negativo17
     install:
       packages:
         - fastfetch
@@ -32,10 +32,6 @@ modules:
         - waydroid
         - git
         - steam
-        - pipewire-alsa.x86_64
-        - pipewire-alsa.i686
-        - pipewire-libs.x86_64
-        - pipewire-libs.i686
         - NetworkManager-tui
     remove:
       packages:
