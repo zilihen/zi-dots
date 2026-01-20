@@ -22,7 +22,6 @@ modules:
         - stefan-maassen/wezterm
       nonfree: rpmfusion
     install:
-      skip-broken: true
       packages:
         - fastfetch
         - btop
@@ -33,8 +32,10 @@ modules:
         - waydroid
         - git
         - steam
-        - pipewire-pulse
         - NetworkManager-tui
+      exclude: 
+        - pipewire-alsa.i686
+        - pipewire-libs.i686
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
