@@ -1,6 +1,7 @@
 (
     state: Enabled,
     click_method: Some(Clickfinger),
+    left_handed: Some(false),
     scroll_config: Some((
         method: Some(TwoFinger),
         natural_scroll: Some(true),
