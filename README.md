@@ -1,4 +1,4 @@
-# Zi's Dots &nbsp; [![bluebuild build badge](https://github.com/zilihen/zi-dots/actions/workflows/build.yml/badge.svg)](https://github.com/zilihen/zi-dots/actions/workflows/build.yml)
+# Zi's Dots
 
 This repo pertains to both my NixOS. Cosmic DE is the main desktop environment I use on both systems. A quickshell configuration may be created in the future for hyprland but for now Cosmic will do.
 
