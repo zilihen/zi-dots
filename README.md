@@ -51,7 +51,6 @@ For other distros, it is really just install your desired packages and programs 
 
 ```sh
 cd ~/zi-dots/config
-ln -sf "$(pwd)/oxwm" ~/.config/oxwm &
 ln -sf "$(pwd)/wezterm" ~/.config/wezterm &
 ln -sf "$(pwd)/fish" ~/.config/fish &
 ln -sf "$(pwd)/dunst" ~/.config/dunst &
