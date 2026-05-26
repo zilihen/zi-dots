@@ -1,6 +1,6 @@
 # Zi's Dots
 
-This repo pertains to both my NixOS. Cosmic DE is the main desktop environment I use on both systems. A quickshell configuration may be created in the future for hyprland but for now Cosmic will do.
+This repo contains my dot files. Cosmic DE is the main desktop environment I use on both systems. A quickshell configuration may be created in the future for hyprland but for now Cosmic will do.
 
 > [!note] 
 > I do not use home-manager for my NixOS setup, I have used it before and found it very frustrating to use. Instead, I use hjem to manage all my dots files stored in `config` directory which are symlinked by their respective directory in `~/.config`. This makes it easy to set up the configurations in other distro without using home-manager and nix.
