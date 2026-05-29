@@ -53,7 +53,6 @@ For other distros, it is really just install your desired packages and programs 
 cd ~/zi-dots/config
 ln -sf "$(pwd)/wezterm" ~/.config/wezterm &
 ln -sf "$(pwd)/fish" ~/.config/fish &
-ln -sf "$(pwd)/dunst" ~/.config/dunst &
 ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml
 ```
 Note: for st and dmenu, you will need to `cd` into them and build them with `sudo make clean install`. I think this is also the case for NixOS, I'm not too sure since I don't use X11 window manager anymore except when testing oxwm by tony on my Arch system. They are just there.
