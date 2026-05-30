@@ -20,9 +20,83 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 
+-- Keybinds
 
+-- Session
+hl.bind("SHIFT + CTRL + Q", hl.dsp.exit())
 
--- Laptop Keybinds
+-- Launch Applications/Commands
+hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind("SUPER + Return", hl.dsp.exec_cmd("wezterm"))
+hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
+hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("hyprlauncher"))
+hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
+
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
+hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
+
+-- Window Management
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + F", hl.dsp.window.fullscreen())
+hl.bind("SUPER + M", hl.dsp.window.fullscreen())
+hl.bind("SUPER + C", hl.dsp.window.center())
+hl.bind("SUPER + CTRL + space", hl.dsp.window.float({ action = "toggle" }))
+
+hl.bind("SUPER + Left", hl.dsp.focus({ direction = "left" }))
+hl.bind("SUPER + Right", hl.dsp.focus({ direction = "right" }))
+hl.bind("SUPER + Up", hl.dsp.focus({ direction = "up" }))
+hl.bind("SUPER + Down", hl.dsp.focus({ direction = "down" }))
+
+hl.bind("SUPER + CTRL + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }))
+hl.bind("SUPER + CTRL + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
+hl.bind("SUPER + CTRL + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
+hl.bind("SUPER + CTRL + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
+
+hl.bind("SUPER + SHIFT + Left", hl.dsp.window.swap({ direction = "left" }))
+hl.bind("SUPER + SHIFT + Right", hl.dsp.window.swap({ direction = "right" }))
+hl.bind("SUPER + SHIFT + Up", hl.dsp.window.swap({ direction = "up" }))
+hl.bind("SUPER + SHIFT + Down", hl.dsp.focus({ direction = "down" }))
+
+hl.bind("ALT + Tab", function()
+    hl.dispatch(hl.dsp.window.cycle_next())    -- Change focus to another window
+    hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+end)
+
+-- Workspace Management
+hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }))
+hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }))
+hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }))
+hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }))
+hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }))
+hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }))
+hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }))
+hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }))
+hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }))
+
+hl.bind("SUPER + CTRL + 1", hl.dsp.window.move({ workspace = 1, silent = true }))
+hl.bind("SUPER + CTRL + 2", hl.dsp.window.move({ workspace = 2, silent = true }))
+hl.bind("SUPER + CTRL + 3", hl.dsp.window.move({ workspace = 3, silent = true }))
+hl.bind("SUPER + CTRL + 4", hl.dsp.window.move({ workspace = 4, silent = true }))
+hl.bind("SUPER + CTRL + 5", hl.dsp.window.move({ workspace = 5, silent = true }))
+hl.bind("SUPER + CTRL + 6", hl.dsp.window.move({ workspace = 6, silent = true }))
+hl.bind("SUPER + CTRL + 7", hl.dsp.window.move({ workspace = 7, silent = true }))
+hl.bind("SUPER + CTRL + 8", hl.dsp.window.move({ workspace = 8, silent = true }))
+hl.bind("SUPER + CTRL + 9", hl.dsp.window.move({ workspace = 9, silent = true }))
+
+hl.bind("SUPER + Tab", hl.dsp.focus({ workspace = "+1" }))
+hl.bind("SUPER + CTRL + Tab", hl.dsp.focus({ workspace = -1 }))
+
+-- Mouse Binds
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), {
+    mouse = true,
+})
+hl.bind("SUPER + mouse:273", hl.dsp.window.drag(), {
+    mouse = true,
+})
+
+-- Laptop Volume Keybinds
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
@@ -35,13 +109,6 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
-
--- Other Binds
-hl.bind("SUPER + Tab", function()
-    hl.dispatch(hl.dsp.window.cycle_next())    -- Change focus to another window
-    hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
-end)
-
 
 -- Monitor
 hl.monitor({
