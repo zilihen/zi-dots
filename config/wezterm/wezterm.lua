@@ -5,7 +5,7 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 
 config.automatically_reload_config = true
-config.enable_wayland = true
+config.enable_wayland = false
 
 -- Default Program
 -- config.default_prog = { 'fish' }
