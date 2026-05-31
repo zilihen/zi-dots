@@ -24,7 +24,7 @@ hl.bind("SHIFT + CTRL + Q", hl.dsp.exit())
 
 -- Launch Applications/Commands
 hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
-hl.bind("SUPER + Return", hl.dsp.exec_cmd("wezterm"))
+hl.bind("SUPER + Return", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
 hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("hyprlauncher"))
