@@ -1,7 +1,4 @@
 
--- HyprMod managed settings
-require("hyprland-gui")
-
 -- autostart
 hl.on("hyprland.start", function () 
   hl.exec_cmd("udiskie")
