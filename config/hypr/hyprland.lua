@@ -24,7 +24,9 @@ hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
 hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("hyprlauncher"))
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
-hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
+
+-- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
+hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
 hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
 

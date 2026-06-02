@@ -12,6 +12,17 @@ Directories and files pertaining to NixOS:
 - `flake.nix`
 - `flake.lock`
 
+## Packages I use
+- hyprland - Window Manager
+    - hypridle - Idle daemon
+    - hyprlock - Screen locking tool
+    - hyprpaper - For wallpaper
+- [ashell](https://github.com/MalpenZibo/ashell) - bar, similar to waybar. Works out of the box
+- swaync - For notifications 
+- foot - lightweighted wayland terminal
+- fish - My default interactive shell
+- flameshot - Screenshot tool I use. Use latest git version
+
 
 # Installation 
 
@@ -51,8 +62,9 @@ For other distros, it is really just install your desired packages and programs 
 
 ```sh
 cd ~/zi-dots/config
-ln -sf "$(pwd)/wezterm" ~/.config/wezterm &
+ln -sf "$(pwd)/foot" ~/.config/foot &
 ln -sf "$(pwd)/fish" ~/.config/fish &
-ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml
+ln -sf "$(pwd)/ashell" ~/.config/ashell &
+ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml 
 ```
 Note: for st and dmenu, you will need to `cd` into them and build them with `sudo make clean install`. I think this is also the case for NixOS, I'm not too sure since I don't use X11 window manager anymore except when testing oxwm by tony on my Arch system. They are just there.
