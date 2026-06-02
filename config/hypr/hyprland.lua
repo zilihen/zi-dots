@@ -7,14 +7,8 @@ end)
 
 -- env variables
 hl.env("HYPRSHOT_DIR", "$HOME/Pictures/Screenshots")
-hl.env("CLUTTER_BACKEND", "wayland")
-hl.env("SDL_VIDEODRIVER", "wayland")
-hl.env("GDK_BACKEND", "wayland")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
-
-hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
-hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 
 -- Keybinds
@@ -46,15 +40,15 @@ hl.bind("SUPER + Right", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + Up", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + Down", hl.dsp.focus({ direction = "down" }))
 
-hl.bind("SUPER + CTRL + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }))
-hl.bind("SUPER + CTRL + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
-hl.bind("SUPER + CTRL + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
-hl.bind("SUPER + CTRL + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
+hl.bind("SUPER + SHIFT + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+hl.bind("SUPER + SHIFT + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+hl.bind("SUPER + SHIFT + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+hl.bind("SUPER + SHIFT + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
 
-hl.bind("SUPER + SHIFT + Left", hl.dsp.window.swap({ direction = "left" }))
-hl.bind("SUPER + SHIFT + Right", hl.dsp.window.swap({ direction = "right" }))
-hl.bind("SUPER + SHIFT + Up", hl.dsp.window.swap({ direction = "up" }))
-hl.bind("SUPER + SHIFT + Down", hl.dsp.focus({ direction = "down" }))
+hl.bind("SUPER + CTRL + Left", hl.dsp.window.swap({ direction = "left" }))
+hl.bind("SUPER + CTRL + Right", hl.dsp.window.swap({ direction = "right" }))
+hl.bind("SUPER + CTRL + Up", hl.dsp.window.swap({ direction = "up" }))
+hl.bind("SUPER + CTRL + Down", hl.dsp.window.swap({ direction = "down" }))
 
 hl.bind("ALT + Tab", function()
     hl.dispatch(hl.dsp.window.cycle_next())    -- Change focus to another window
@@ -72,15 +66,15 @@ hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }))
 hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }))
 hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }))
 
-hl.bind("SUPER + CTRL + 1", hl.dsp.window.move({ workspace = 1, silent = true }))
-hl.bind("SUPER + CTRL + 2", hl.dsp.window.move({ workspace = 2, silent = true }))
-hl.bind("SUPER + CTRL + 3", hl.dsp.window.move({ workspace = 3, silent = true }))
-hl.bind("SUPER + CTRL + 4", hl.dsp.window.move({ workspace = 4, silent = true }))
-hl.bind("SUPER + CTRL + 5", hl.dsp.window.move({ workspace = 5, silent = true }))
-hl.bind("SUPER + CTRL + 6", hl.dsp.window.move({ workspace = 6, silent = true }))
-hl.bind("SUPER + CTRL + 7", hl.dsp.window.move({ workspace = 7, silent = true }))
-hl.bind("SUPER + CTRL + 8", hl.dsp.window.move({ workspace = 8, silent = true }))
-hl.bind("SUPER + CTRL + 9", hl.dsp.window.move({ workspace = 9, silent = true }))
+hl.bind("SUPER + CTRL + 1", hl.dsp.window.move({ workspace = 1, follow = false }))
+hl.bind("SUPER + CTRL + 2", hl.dsp.window.move({ workspace = 2, follow = false }))
+hl.bind("SUPER + CTRL + 3", hl.dsp.window.move({ workspace = 3, follow = false }))
+hl.bind("SUPER + CTRL + 4", hl.dsp.window.move({ workspace = 4, follow = false }))
+hl.bind("SUPER + CTRL + 5", hl.dsp.window.move({ workspace = 5, follow = false }))
+hl.bind("SUPER + CTRL + 6", hl.dsp.window.move({ workspace = 6, follow = false }))
+hl.bind("SUPER + CTRL + 7", hl.dsp.window.move({ workspace = 7, follow = false }))
+hl.bind("SUPER + CTRL + 8", hl.dsp.window.move({ workspace = 8, follow = false }))
+hl.bind("SUPER + CTRL + 9", hl.dsp.window.move({ workspace = 9, follow = false }))
 
 hl.bind("SUPER + Tab", hl.dsp.focus({ workspace = "+1" }))
 hl.bind("SUPER + CTRL + Tab", hl.dsp.focus({ workspace = -1 }))
@@ -132,12 +126,13 @@ hl.config({
         follow_mouse = 1,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        accel_profile = "adaptive",
 
         touchpad = {
             natural_scroll = true,
             tap_to_click = true, 
             tap_and_drag = true, 
-            scroll_factor = 1.5,
+            scroll_factor = 1,
             clickfinger_behavior = true
         },
     },
