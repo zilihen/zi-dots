@@ -25,9 +25,10 @@ hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher"))
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -')) -- in case flameshot doesn't work
 -- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
-hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
-hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
+-- hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
+-- hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
 
 -- Window Management
 hl.bind("SUPER + Q", hl.dsp.window.close())
