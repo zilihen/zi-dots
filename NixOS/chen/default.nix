@@ -8,11 +8,11 @@
 let
   configs = {
     hypr = "hypr";
-    dunst = "dunst";
     oxwm = "oxwm";
-    wezterm = "wezterm";
+    foot = "foot";
     fish = "fish";
-    cosmic = "cosmic";
+    swaync = "swaync";
+    ashell = "ashell";
     "starship.toml" = "starship.toml";
   };
 in
@@ -88,7 +88,6 @@ in
       kdePackages.breeze-gtk
 
       # basic packages that I need/want
-      quickshell
       nwg-look
       electron
       wget
@@ -107,7 +106,6 @@ in
       discord
       prismlauncher
       starship
-      dunst
       btop
       libreoffice
       heroic
@@ -115,13 +113,19 @@ in
 
       # Developer tools and software that I use
       nixfmt
-      wezterm
       foot
       jdk
       cargo
       gcc
       vscode
       gh
+
+      # Desktop Environment
+      hyprlock
+      hypridle
+      hyprpape
+      ashell
+      swaync
     ];
   };
 

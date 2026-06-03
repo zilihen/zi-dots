@@ -21,12 +21,11 @@ hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
-hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("hyprlauncher"))
+hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher"))
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
-
--- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
 hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
+-- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
 hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
 
@@ -78,8 +77,8 @@ hl.bind("SUPER + CTRL + 7", hl.dsp.window.move({ workspace = 7, follow = false }
 hl.bind("SUPER + CTRL + 8", hl.dsp.window.move({ workspace = 8, follow = false }))
 hl.bind("SUPER + CTRL + 9", hl.dsp.window.move({ workspace = 9, follow = false }))
 
-hl.bind("SUPER + Tab", hl.dsp.focus({ workspace = "+1" }))
-hl.bind("SUPER + CTRL + Tab", hl.dsp.focus({ workspace = -1 }))
+hl.bind("SUPER + Tab", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind("SUPER + CTRL + Tab", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Mouse Binds
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), {
@@ -266,9 +265,9 @@ hl.window_rule({
 })
 
 hl.window_rule({ 
-    name = "Steam Stuff", 
+    name = "Launcher", 
     match = { 
-        class = "steam"
+        class = "(steam)|(heroic)|(org.prismlauncher.PrismLauncher)"
     },
     float = true, 
     workspace = 4, 
@@ -284,3 +283,25 @@ hl.window_rule({
     workspace = 3, 
     no_initial_focus = true,
 })
+
+hl.window_rule({ 
+    name = "games", 
+    match = { 
+        class = "^steam_app_[0-9]*$",
+    }, 
+    workspace = 4,
+    float = true, 
+    no_initial_focus = true, 
+    size = {"monitor_w * 0.75", "monitor_h * 0.6"}, 
+    center = true,
+})
+
+hl.window_rule({ 
+    name = "float layout workspace 4", 
+    match = { 
+        workspace = 4,
+    }, 
+    float = true,
+    size = {"monitor_w * 0.75", "monitor_h * 0.6"}
+})
+
