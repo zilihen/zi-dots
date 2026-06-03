@@ -33,7 +33,7 @@ hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -')) -
 -- Window Management
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-hl.bind("SUPER + M", hl.dsp.window.fullscreen())
+hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized"}))
 hl.bind("SUPER + C", hl.dsp.window.center())
 hl.bind("SUPER + CTRL + space", hl.dsp.window.float({ action = "toggle" }))
 
