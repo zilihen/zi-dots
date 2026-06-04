@@ -2,7 +2,7 @@
 -- autostart
 hl.on("hyprland.start", function () 
   hl.exec_cmd("udiskie")
-  hl.exec_cmd("ashell & hyprpaper & hypridle")
+  hl.exec_cmd("wayle panel start & hyprpaper & hypridle")
 end)
 
 -- env variables
@@ -85,7 +85,7 @@ hl.bind("SUPER + CTRL + Tab", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), {
     mouse = true,
 })
-hl.bind("SUPER + mouse:273", hl.dsp.window.drag(), {
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), {
     mouse = true,
 })
 
