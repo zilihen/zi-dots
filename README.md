@@ -19,8 +19,7 @@ Note: Currently not using NixOS. Right now I am using CachyOS so the NixOS confi
     - hypridle - Idle daemon
     - hyprlock - Screen locking tool
     - hyprpaper - For wallpaper
-- [ashell](https://github.com/MalpenZibo/ashell) - bar, similar to waybar. Works out of the box
-- swaync - For notifications 
+- [wayle](https://github.com/wayle-rs/wayle) - bar, similar to waybar but more features packed. Has its own notification system.
 - foot - lightweighted wayland terminal
 - fish - My default interactive shell
 - flameshot - Screenshot tool I use. Use latest git version

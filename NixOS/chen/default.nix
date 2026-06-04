@@ -123,9 +123,8 @@ in
       # Desktop Environment
       hyprlock
       hypridle
-      hyprpape
-      ashell
-      swaync
+      hyprpaper
+      wayle
     ];
   };
 
