@@ -51,5 +51,14 @@ label-size = 1
 [modules.window-title]
 format = "{{ app }}"
 
+[modules.dashboard]
+icon-color = "#009C08"
+
+[modules.ram]
+format = "{{ used_gib }}/{{ total_gib }} GiB"
+
+[modules.cpu]
+format = "{{ percent }}% {{ temp_c }}C"
+
 
 
