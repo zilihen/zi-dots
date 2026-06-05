@@ -64,8 +64,9 @@ For other distros, it is really just install your desired packages and programs 
 
 ```sh
 cd ~/zi-dots/config
+ln -sf "$(pwd)/hypr" ~/.config/hypr &
 ln -sf "$(pwd)/foot" ~/.config/foot &
 ln -sf "$(pwd)/fish" ~/.config/fish &
-ln -sf "$(pwd)/ashell" ~/.config/ashell &
+ln -sf "$(pwd)/wayle" ~/.config/wayle &
 ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml 
 ```

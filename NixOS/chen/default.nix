@@ -12,7 +12,7 @@ let
     foot = "foot";
     fish = "fish";
     swaync = "swaync";
-    ashell = "ashell";
+    wayle = "wayle";
     "starship.toml" = "starship.toml";
   };
 in
@@ -109,22 +109,20 @@ in
       btop
       libreoffice
       heroic
-      cosign
 
       # Developer tools and software that I use
       nixfmt
-      foot
       jdk
       cargo
       gcc
       vscode
-      gh
 
       # Desktop Environment
       hyprlock
       hypridle
       hyprpaper
       wayle
+      foot
     ];
   };
 
