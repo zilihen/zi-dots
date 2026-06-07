@@ -11,10 +11,10 @@
     "dock": "right",
     "sidebar_side": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "vim_mode": true,
   "icon_theme": "Zed (Default)",
@@ -27,6 +27,8 @@
   },
   "file_types": {
     "Hyprland Config": [
+      "hyprland.lua",
+      "hyprlandd.lua",
       "hyprland.conf",
       "hyprlandd.conf",
       "hyprland.hl",
