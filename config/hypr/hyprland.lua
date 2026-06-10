@@ -20,7 +20,7 @@ hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
-hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher"))
+hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher -t"))
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
@@ -111,7 +111,7 @@ hl.monitor({
     output   = "",
     mode     = "2256x1504@60",
     position = "0x0",
-    scale    = 1.33,
+    scale    = 1,
     vrr      = 3,
 })
 
@@ -152,8 +152,8 @@ hl.gesture({
 -- General Setting and Decoration
 hl.config({
     general = {
-        gaps_in          = 2,
-        gaps_out         = 8,
+        gaps_in          = 5,
+        gaps_out         = 20,
 
         border_size      = 2,
 
@@ -163,7 +163,7 @@ hl.config({
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = true,
+        resize_on_border = false,
 
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing    = false,
@@ -184,7 +184,7 @@ hl.config({
         inactive_opacity = 0.9,
 
         shadow           = {
-            enabled      = false,
+            enabled      = true,
             range        = 4,
             render_power = 3,
             color        = 0xee1a1a1a,
