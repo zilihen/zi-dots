@@ -1,5 +1,5 @@
 [styling]
-scale = 0.9
+scale = 1
 
 [styling.palette]
 bg = "#1a1b26"
@@ -36,7 +36,7 @@ center = ["weather", "clock", "dashboard"]
 right = [
     "systray",
     { name = "SystemInfo", modules = ["cpu", "ram", "storage"]},
-    { name = "status", modules = [ "volume", "microphone", "network", "bluetooth", "battery"] }, 
+    { name = "status", modules = [ "volume", "microphone", "network", "bluetooth", "battery"] },
     "notifications"
     ]
 
@@ -59,6 +59,3 @@ format = "{{ used_gib }}/{{ total_gib }} GiB"
 
 [modules.cpu]
 format = "{{ percent }}% {{ temp_c }}C"
-
-
-
