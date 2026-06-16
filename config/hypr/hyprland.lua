@@ -108,11 +108,19 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 
 -- Monitor
 hl.monitor({
-    output   = "",
+    output   = "eDP-1",
     mode     = "2256x1504@60",
-    position = "0x0",
+    position = "auto",
     scale    = 1,
     vrr      = 3,
+})
+
+hl.monitor({
+    output   = "DP-2",
+    mode     = "1920x1080@60",
+    position = "0x0",
+    scale    = 1,
+    vrr      = 1,
 })
 
 -- Input: Keyboard, Mouse, Touchpad
@@ -131,7 +139,6 @@ hl.config({
         follow_mouse       = 1,
 
         sensitivity        = 0, -- -1.0 - 1.0, 0 means no modification.
-        accel_profile      = "adaptive",
 
         touchpad           = {
             natural_scroll = true,
