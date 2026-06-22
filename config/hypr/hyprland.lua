@@ -23,8 +23,7 @@ hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
 hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher -t"))
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
-hl.bind("Print", hl.dsp.exec_cmd("flameshot gui"))
-hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -')) -- in case flameshot doesn't work
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -')) -- in case flameshot doesn't work
 -- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
 -- hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
 -- hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
@@ -108,19 +107,20 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 
 -- Monitor
 hl.monitor({
-    output   = "eDP-1",
-    mode     = "2256x1504@60",
+    output   = "",
+    mode     = "preferred",
     position = "auto",
     scale    = 1,
-    vrr      = 3,
+    vrr      = 1,
 })
 
+
 hl.monitor({
-    output   = "DP-2",
-    mode     = "1920x1080@60",
+    output   = "eDP-1",
+    mode     = "2256x1504@60",
     position = "0x0",
     scale    = 1,
-    vrr      = 1,
+    vrr      = 3,
 })
 
 -- Input: Keyboard, Mouse, Touchpad
