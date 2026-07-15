@@ -319,3 +319,8 @@ hl.window_rule({
     float = true,
     size = { "monitor_w * 0.75", "monitor_h * 0.6" }
 })
+
+hl.workspace_rule({
+    workspace = 3,
+    monitor = "eDP-1",
+})
