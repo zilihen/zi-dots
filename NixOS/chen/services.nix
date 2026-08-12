@@ -5,8 +5,6 @@
 }:
 
 {
-  services.flatpak.enable = true;
-
   services.upower.enable = true;
   services.blueman.enable = true;
   services.printing = {

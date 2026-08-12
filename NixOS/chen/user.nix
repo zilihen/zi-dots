@@ -5,9 +5,83 @@
   ...
 }:
 
+let
+  configs = {
+    hypr = "hypr";
+    oxwm = "oxwm";
+    foot = "foot";
+    fish = "fish";
+    noctalia = "noctalia";
+    "starship.toml" = "starship.toml";
+  };
+in
+
 {
-  virtualisation.waydroid.enable = true;
-  virtualisation.docker.enable = true;
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+  };
+
+  users.users.chen = {
+    isNormalUser = true;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "libvirtd"
+    ];
+    packages = with pkgs; [
+
+      # cursors, and theme
+      adwaita-icon-theme
+
+      # basic packages that I need/want
+      nwg-look
+      electron
+      wget
+      zip
+      unzip
+      udiskie
+      bluez
+      bluez-tools
+      wl-clipboard
+      brightnessctl
+      pavucontrol
+      playerctl
+      microsoft-edge
+      discord
+      btop
+      libreoffice
+
+      # games
+      prismlauncher
+      heroic
+      protonplus
+
+      # Developer tools and software that I use
+      nixfmt
+      jdk
+      gcc
+      vscode
+
+      foot
+      starship
+    ];
+  };
+
+  hjem.users.chen = {
+    user = "chen";
+    directory = "/home/chen";
+    xdg.config.files = builtins.mapAttrs (name: subpath: {
+      source = "/home/chen/zi-dots/config/${subpath}";
+    }) configs;
+  };
+
+  services.flatpak.enable = true;
+  programs.noctalia = { 
+    enable = true; 
+    recommendedServices.enable = true;
+  };
   programs.fish.enable = true;
   programs.hyprland = {
     enable = true;

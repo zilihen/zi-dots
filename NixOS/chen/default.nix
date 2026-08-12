@@ -5,29 +5,12 @@
   ...
 }:
 
-let
-  configs = {
-    hypr = "hypr";
-    oxwm = "oxwm";
-    foot = "foot";
-    fish = "fish";
-    swaync = "swaync";
-    wayle = "wayle";
-    "starship.toml" = "starship.toml";
-  };
-in
-
 {
   imports = [
-    ./programs.nix
+    ./user.nix
     ./services.nix
-    ./vm.nix
+    # ./vm.nix
   ];
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
-  };
 
   # Security is good
   security = {
@@ -49,8 +32,6 @@ in
     ];
   };
 
-  xdg.icons.fallbackCursorThemes = [ "Bibata-Modern-Classic" ];
-
   nix = {
     settings.auto-optimise-store = true;
     gc = {
@@ -70,67 +51,5 @@ in
       jetbrains-mono
       nerd-fonts.jetbrains-mono
     ];
-  };
-
-  users.users.chen = {
-    isNormalUser = true;
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "video"
-      "libvirtd"
-    ];
-    packages = with pkgs; [
-
-      # cursors, and theme
-      bibata-cursors
-      kdePackages.breeze
-      kdePackages.breeze-gtk
-
-      # basic packages that I need/want
-      nwg-look
-      electron
-      wget
-      zip
-      unzip
-      udiskie
-      bluez
-      bluez-tools
-      wl-clipboard
-      brightnessctl
-      pavucontrol
-      playerctl
-      spotify
-      ani-cli
-      microsoft-edge
-      discord
-      prismlauncher
-      starship
-      btop
-      libreoffice
-      heroic
-
-      # Developer tools and software that I use
-      nixfmt
-      jdk
-      cargo
-      gcc
-      vscode
-
-      # Desktop Environment
-      hyprlock
-      hypridle
-      hyprpaper
-      wayle
-      foot
-    ];
-  };
-
-  hjem.users.chen = {
-    user = "chen";
-    directory = "/home/chen";
-    xdg.config.files = builtins.mapAttrs (name: subpath: {
-      source = "/home/chen/zi-dots/config/${subpath}";
-    }) configs;
   };
 }

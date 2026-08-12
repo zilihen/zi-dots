@@ -1,0 +1,8 @@
+[wallpaper]
+enable = true
+fill_mode = "crop"
+
+directory = "~/zi-dots/wallpapers"
+
+[wallpaper.default]
+path = "~/zi-dots/wallpapers/purple_night.jpg"

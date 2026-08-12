@@ -1,7 +1,7 @@
 -- autostart
 hl.on("hyprland.start", function()
     hl.exec_cmd("udiskie")
-    hl.exec_cmd("wayle panel start & hyprpaper & hypridle")
+    hl.exec_cmd("noctalia")
 end)
 
 -- env variables
@@ -20,8 +20,11 @@ hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
-hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher -t"))
-hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind("SUPER + Space", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind("SUPER + S", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
+
+-- hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher -t"))
+-- hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -')) -- in case flameshot doesn't work
 -- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
@@ -34,6 +37,7 @@ hl.bind("SUPER + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized" }))
 hl.bind("SUPER + C", hl.dsp.window.center())
 hl.bind("SUPER + CTRL + space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd("noctalia msg window-switcher"))
 
 hl.bind("SUPER + Left", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + Right", hl.dsp.focus({ direction = "right" }))
@@ -50,10 +54,10 @@ hl.bind("SUPER + CTRL + Right", hl.dsp.window.swap({ direction = "right" }))
 hl.bind("SUPER + CTRL + Up", hl.dsp.window.swap({ direction = "up" }))
 hl.bind("SUPER + CTRL + Down", hl.dsp.window.swap({ direction = "down" }))
 
-hl.bind("ALT + Tab", function()
-    hl.dispatch(hl.dsp.window.cycle_next())   -- Change focus to another window
-    hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
-end)
+-- hl.bind("ALT + Tab", function()
+--     hl.dispatch(hl.dsp.window.cycle_next())   -- Change focus to another window
+--     hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+-- end)
 
 -- Workspace Management
 hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }))
@@ -284,8 +288,7 @@ hl.window_rule({
     match = {
         class = "(steam)|(heroic)|(org.prismlauncher.PrismLauncher)"
     },
-    float = true,
-    workspace = 4,
+    workspace = 3,
     center = true,
     no_initial_focus = true,
 })
@@ -295,7 +298,7 @@ hl.window_rule({
     match = {
         class = "discord"
     },
-    workspace = 3,
+    workspace = 2,
     no_initial_focus = true,
 })
 
@@ -304,23 +307,40 @@ hl.window_rule({
     match = {
         class = "^steam_app_[0-9]*$",
     },
-    workspace = 4,
-    float = true,
+    workspace = 6,
+    fullscreen = true,
     no_initial_focus = true,
     size = { "monitor_w * 0.75", "monitor_h * 0.6" },
     center = true,
 })
 
+-- hl.window_rule({
+--     name = "float layout workspace 4",
+--     match = {
+--         workspace = 4,
+--     },
+--     float = true,
+--     size = { "monitor_w * 0.75", "monitor_h * 0.6" }
+-- })
+
+for i=1, 5 do 
+    hl.workspace_rule({ workspace = i, monitor = "eDP-1", persistent = true, default = (i==1)})
+end
+
+-- Noctalia Settings
 hl.window_rule({
-    name = "float layout workspace 4",
-    match = {
-        workspace = 4,
-    },
+    match = { class = "dev.noctalia.Noctalia" },
     float = true,
-    size = { "monitor_w * 0.75", "monitor_h * 0.6" }
+    size = { 1080, 920 },
 })
 
-hl.workspace_rule({
-    workspace = 3,
-    monitor = "eDP-1",
+hl.layer_rule({
+  name = "noctalia",
+  match = {
+    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+  },
+  no_anim = true,
+  ignore_alpha = 0.5,
+  blur = true,
+  blur_popups = true,
 })
