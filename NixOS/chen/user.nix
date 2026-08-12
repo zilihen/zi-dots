@@ -74,6 +74,7 @@ in
     directory = "/home/chen";
     xdg.config.files = builtins.mapAttrs (name: subpath: {
       source = "/home/chen/zi-dots/config/${subpath}";
+      clobber = true;
     }) configs;
   };
 
