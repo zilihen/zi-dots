@@ -20,14 +20,17 @@ hl.bind("SHIFT + CTRL + Q", hl.dsp.exit())
 hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
-hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge-stable"))
-hl.bind("SUPER + Space", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
-hl.bind("SUPER + S", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge"))
+hl.bind("SUPER + Super_L", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind("SUPER + Space", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
+hl.bind("SUPER + L", hl.dsp.exec_cmd("noctalia msg session lock"))
 
 -- hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher -t"))
 -- hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -')) -- in case flameshot doesn't work
+
+hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region")) 
+-- hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 -- hl.bind("Print", hl.dsp.exec_cmd("hyprshot -zm region"))
 -- hl.bind("SHIFT + CTRL + Print", hl.dsp.exec_cmd("hyprshot -m window"))
 -- hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))

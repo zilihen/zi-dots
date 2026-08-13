@@ -1,7 +1,5 @@
 # Zi's Dots
 
-This repo contains my dot files. Cosmic DE is the main desktop environment I use. A quickshell configuration may be created in the future for hyprland but for now Cosmic will do.
-
 > [!note] 
 > I do not use home-manager for my NixOS setup, I have used it before and found it very frustrating to use. Instead, I use hjem to manage all my dots files stored in `config` directory which are symlinked by their respective directory in `~/.config`. This makes it easy to set up the configurations in other distro without using home-manager and nix.
 
@@ -11,20 +9,6 @@ Directories and files pertaining to NixOS:
 - `NixOS/` - this contains all my system and user nix files for NixOS
 - `flake.nix`
 - `flake.lock`
-
-Note: Currently not using NixOS. Right now I am using CachyOS so the NixOS configuration will probably not be up to date.
-
-## Packages I use
-- hyprland - Window Manager
-    - hypridle - Idle daemon
-    - hyprlock - Screen locking tool
-    - hyprpaper - For wallpaper
-- [wayle](https://github.com/wayle-rs/wayle) - bar, similar to waybar but more features packed. Has its own notification system.
-- foot - lightweighted wayland terminal
-- fish - My default interactive shell
-- flameshot - Screenshot tool I use. Use latest git version
-    - Will probably switch to grim and swappy since it causes some trouble.
-
 
 # Installation 
 

@@ -5,6 +5,35 @@
 }:
 
 {
+  # Security is good
+  security = {
+    polkit.enable = true;
+  };
+
+  hardware = {
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = true;
+  };
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config.common.default = [ "gtk" ];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
+    ];
+  };
+
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
+
   services.upower.enable = true;
   services.blueman.enable = true;
   services.printing = {
@@ -25,7 +54,7 @@
     jack.enable = true;
   };
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.noctalia-greeter.enable = true;
 
   # X-Server stuff, not really needed therefore can comment everything below out
   services.libinput.enable = true;

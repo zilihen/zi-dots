@@ -22,6 +22,18 @@ in
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
   };
 
+  fonts = {
+    fontDir.enable = true;
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      jetbrains-mono
+      nerd-fonts.jetbrains-mono
+    ];
+  };
+
   users.users.chen = {
     isNormalUser = true;
     extraGroups = [
@@ -34,6 +46,7 @@ in
 
       # cursors, and theme
       adwaita-icon-theme
+      adw-gtk3
 
       # basic packages that I need/want
       nwg-look
@@ -103,7 +116,7 @@ in
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = false;
     gamescopeSession.enable = true;
-    extraPackages = with pkgs; [ bibata-cursors ]; # Add kdePackages.breeze into steam fhs environment to fix cursor problem
+    extraPackages = with pkgs; [ adwaita-icon-theme ]; 
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 }

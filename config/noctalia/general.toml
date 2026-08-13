@@ -1,8 +1,34 @@
-[wallpaper]
-enable = true
-fill_mode = "crop"
+[shell.animation]
+speed = 2
 
-directory = "~/zi-dots/wallpapers"
+[shell.screenshot]
+save_to_file = true
+directory = "~/Pictures/Screenshots"
+copy_to_clipboard = true
+freeze_screen = true
+show_cursor = true
+pipe_command = ""
 
-[wallpaper.default]
-path = "~/zi-dots/wallpapers/purple_night.jpg"
+[osd]
+position = "bottom_center" 
+
+
+[lockscreen]
+enabled = true
+lock_before_suspend = true
+
+
+[lockscreen_widgets]
+enabled = true
+
+[lockscreen_widgets.widget.clock_main]
+type     = "clock"
+output = "eDP-1"
+cx         = 1600.0
+cy         = 120.0
+box_width  = 360.0
+box_height = 120.0
+rotation   = 0.0
+
+[lockscreen_widgets.widget.clock_main.settings]
+format = "{:%H:%M}"
