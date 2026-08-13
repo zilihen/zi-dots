@@ -1,6 +1,6 @@
 [bar.default]
 position = "top"
-background_opacity = 0.6
+background_opacity = 0
 radius = 0
 radius_bottom_left = 12
 radius_bottom_right = 12
@@ -61,3 +61,6 @@ color = "#c60ef4"
 
 [widget.weather]
 color = "#0ad2ff"
+
+[widget.control-center]
+background_opacity = 1
