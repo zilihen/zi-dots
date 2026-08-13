@@ -107,7 +107,7 @@ in
     config = [
       {
         user.name = "zi";
-        user.email = "jasonchen7766@gmail.com";
+        user.email = "hidden";
       }
     ];
   };
