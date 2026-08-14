@@ -11,9 +11,9 @@ capsule = true
 capsule_foreground = "#FFFFFF"
 capsule_fill = "#000000"
 
-start = ["control-center", "weather", "keyboard_layout", "media", "active_window"]
+start = ["control-center", "weather", "wallpaper", "media", "active_window"]
 center = ["group:middle"]
-end = ["tray", "lock_keys", "group:info", "wallpaper", "group:status", "session"]
+end = ["tray", "group:misc", "group:info", "group:status", "session"]
 
 [[bar.default.capsule_group]]
 id = "middle"
@@ -31,6 +31,12 @@ fill = "#000000"
 id = "info"
 enabled = true
 members = ["notifications", "clipboard", "screenshot"]
+fill = "#000000"
+
+[[bar.default.capsule_group]]
+id = "misc"
+enabled = true
+members = ["lock_keys", "keyboard_layout"]
 fill = "#000000"
 
 [widget.bluetooth]

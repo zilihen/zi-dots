@@ -215,7 +215,7 @@ hl.config({
     },
 
     animations = {
-        enabled = true,
+        enabled = false,
     },
 
     dwindle = {
@@ -293,7 +293,7 @@ hl.window_rule({
     match = {
         class = "(steam)|(heroic)|(org.prismlauncher.PrismLauncher)"
     },
-    workspace = 3,
+    workspace = 5,
     center = true,
     no_initial_focus = true,
 })
