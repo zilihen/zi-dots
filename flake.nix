@@ -9,7 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hardware.url = "github:NixOS/nixos-hardware/master";
+    hardware = { 
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: {
@@ -27,6 +30,7 @@
       specialArgs = {inherit inputs; };
       modules = [
         inputs.hjem.nixosModules.default
+        inputs.hardware.nixosModules.framework-intel-core-ultra-series1
         ./NixOS/laptop.nix
         ./NixOS/chen
       ];
