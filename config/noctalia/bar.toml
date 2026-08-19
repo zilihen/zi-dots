@@ -11,9 +11,13 @@ capsule = true
 capsule_foreground = "#FFFFFF"
 capsule_fill = "#000000"
 
-start = ["control-center", "weather", "wallpaper", "media", "active_window"]
-center = ["group:middle"]
-end = ["tray", "group:misc", "group:info", "group:status", "session"]
+start = ["active_window"]
+center = ["tray", "group:middle"]
+end = ["battery", "keyboard_layout", "control-center"]
+
+# start = ["control-center", "weather", "wallpaper", "media", "active_window"]
+# center = ["group:middle"]
+# end = ["tray", "group:misc", "group:info", "group:status", "session"]
 
 [[bar.default.capsule_group]]
 id = "middle"

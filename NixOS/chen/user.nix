@@ -17,11 +17,6 @@ let
 in
 
 {
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
-  };
-
   fonts = {
     fontDir.enable = true;
     enableDefaultPackages = true;
@@ -65,6 +60,7 @@ in
       discord
       btop
       libreoffice
+      xdg-utils
 
       # games
       prismlauncher

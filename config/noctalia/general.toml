@@ -41,6 +41,30 @@ rotation   = 0.0
 [lockscreen_widgets.widget.clock_main.settings]
 format = "{:%H:%M}"
 
+[control_center]
+sidebar = "full"
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "audio"
+
+[[control_center.shortcuts]]
+type = "system"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[system.monitor]
+enabled = true
+
 [idle]
 behavior_order = ["lock", "screen-off", "suspend"]
 pre_action_fade_seconds = 2.0
