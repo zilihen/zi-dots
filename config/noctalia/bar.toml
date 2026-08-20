@@ -13,7 +13,7 @@ capsule_fill = "#000000"
 
 start = ["active_window"]
 center = ["tray", "group:middle"]
-end = ["battery", "keyboard_layout", "control-center"]
+end = ["battery", "keyboard_layout"]
 
 # start = ["control-center", "weather", "wallpaper", "media", "active_window"]
 # center = ["group:middle"]
