@@ -56,7 +56,7 @@ color = "#fb1c32"
 color = "#ebf708"
 
 [widget.battery]
-color = "#f7a708"
+color = "#34f708"
 
 [widget.workspaces]
 focused_color = "#e3a81d"
