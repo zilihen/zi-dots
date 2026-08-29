@@ -17,12 +17,12 @@
 
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
-    config.common.default = [ "gtk" ];
+    config.common.default = ["hyprland" "gtk"];
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-hyprland
     ];
+    configPackages = [ pkgs.hyprland ];
   };
 
   nix = {
@@ -55,6 +55,8 @@
   };
 
   services.displayManager.noctalia-greeter.enable = true;
+
+  # services.displayManager.gdm.enable = true;
 
   # X-Server stuff, not really needed therefore can comment everything below out
   services.libinput.enable = true;

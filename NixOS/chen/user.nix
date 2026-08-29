@@ -17,6 +17,14 @@ let
 in
 
 {
+
+  environment.sessionVariables = {
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+    XCURSOR_THEME = "Adwaita"; 
+    XCURSOR_SIZE = "24"; 
+  };
+
   fonts = {
     fontDir.enable = true;
     enableDefaultPackages = true;
@@ -42,6 +50,7 @@ in
       # cursors, and theme
       adwaita-icon-theme
       adw-gtk3
+      qt6Packages.qt6ct
 
       # basic packages that I need/want
       nwg-look
@@ -61,6 +70,7 @@ in
       btop
       libreoffice
       xdg-utils
+      thunar
 
       # games
       prismlauncher
@@ -95,7 +105,7 @@ in
   programs.fish.enable = true;
   programs.hyprland = {
     enable = true;
-    withUWSM = false;
+    withUWSM = true;
     xwayland.enable = true;
   };
   programs.git = {
