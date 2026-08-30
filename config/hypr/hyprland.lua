@@ -307,13 +307,24 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "games",
+    name = "game",
     match = {
         class = "^steam_app_[0-9]*$",
     },
     workspace = 6,
     float = true,
     fullscreen = true,
+    no_initial_focus = true,
+    size = { 1320, 750 },
+    center = true,
+})
+
+hl.window_rule({
+    name = "float satty",
+    match = {
+        title = "satty",
+    },
+    float = true,
     no_initial_focus = true,
     size = { 1320, 750 },
     center = true,

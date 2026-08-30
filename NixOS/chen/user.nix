@@ -71,6 +71,7 @@ in
       libreoffice
       xdg-utils
       thunar
+      satty
 
       # games
       prismlauncher
