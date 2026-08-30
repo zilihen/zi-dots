@@ -330,6 +330,17 @@ hl.window_rule({
     center = true,
 })
 
+hl.window_rule({
+    name = "xdg portal stuff",
+    match = {
+        class = "xdg-desktop-portal-gtk",
+    },
+    float = true,
+    no_initial_focus = true,
+    size = { 1320, 750 },
+    center = true,
+})
+
 -- hl.window_rule({
 --     name = "float layout workspace 4",
 --     match = {
