@@ -302,7 +302,7 @@ hl.window_rule({
     match = {
         class = "discord"
     },
-    workspace = 2,
+    workspace = 1,
     no_initial_focus = true,
 })
 
@@ -312,9 +312,10 @@ hl.window_rule({
         class = "^steam_app_[0-9]*$",
     },
     workspace = 6,
+    float = true,
     fullscreen = true,
     no_initial_focus = true,
-    size = { "monitor_w * 0.75", "monitor_h * 0.6" },
+    size = { 1320, 750 },
     center = true,
 })
 
@@ -324,7 +325,7 @@ hl.window_rule({
 --         workspace = 4,
 --     },
 --     float = true,
---     size = { "monitor_w * 0.75", "monitor_h * 0.6" }
+--     size = { "monitor_w * 0.8", "monitor_h * 0.75" }
 -- })
 
 for i=1, 5 do 
