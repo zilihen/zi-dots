@@ -70,7 +70,7 @@ in
       btop
       libreoffice
       xdg-utils
-      thunar
+      nautilus
       satty
 
       # games

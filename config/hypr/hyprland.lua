@@ -290,7 +290,7 @@ hl.window_rule({
 hl.window_rule({
     name = "Launcher",
     match = {
-        class = "(steam)|(heroic)|(org.prismlauncher.PrismLauncher)"
+        class = "(steam)|(heroic)|(.*PrismLauncher)"
     },
     workspace = 5,
     center = true,
@@ -331,9 +331,9 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "xdg portal stuff",
+    name = "xdg portal stuff/other applications",
     match = {
-        class = "xdg-desktop-portal-gtk",
+        class = "(.*Nautilus)|(xdg-desktop-portal-gtk)",
     },
     float = true,
     no_initial_focus = true,
