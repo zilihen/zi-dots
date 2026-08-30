@@ -37,6 +37,11 @@ in
     ];
   };
 
+
+  environment.systemPackages = with pkgs; [ 
+    
+  ];
+
   users.users.chen = {
     isNormalUser = true;
     extraGroups = [
@@ -59,11 +64,8 @@ in
       zip
       unzip
       udiskie
-      bluez
-      bluez-tools
       wl-clipboard
       brightnessctl
-      pavucontrol
       playerctl
       microsoft-edge
       discord
@@ -82,6 +84,10 @@ in
       nixfmt
       jdk
       gcc
+      (python3.withPackages (ps: with ps; [
+        dbus-python
+        ]))
+      devenv
       vscode
 
       foot
