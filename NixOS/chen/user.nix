@@ -83,10 +83,8 @@ in
       # Developer tools and software that I use
       nixfmt
       jdk
+      python3
       gcc
-      (python3.withPackages (ps: with ps; [
-        dbus-python
-        ]))
       devenv
       vscode
 
