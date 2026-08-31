@@ -39,7 +39,43 @@ in
 
 
   environment.systemPackages = with pkgs; [ 
-    
+    # cursors, and theme
+    adwaita-icon-theme
+    adw-gtk3
+    qt6Packages.qt6ct
+
+    # basic packages that I need/want
+    nwg-look
+    electron
+    wget
+    zip
+    unzip
+    udiskie
+    wl-clipboard
+    brightnessctl
+    playerctl
+    microsoft-edge
+    discord
+    btop
+    libreoffice
+    xdg-utils
+    nautilus
+    satty
+
+    # games
+    prismlauncher
+    heroic
+    protonplus
+
+    # Developer tools and software that I use
+    nixfmt
+    jdk
+    python3
+    gcc
+    devenv
+    vscode
+    foot
+    starship
   ];
 
   users.users.chen = {
@@ -50,47 +86,7 @@ in
       "video"
       "libvirtd"
     ];
-    packages = with pkgs; [
-
-      # cursors, and theme
-      adwaita-icon-theme
-      adw-gtk3
-      qt6Packages.qt6ct
-
-      # basic packages that I need/want
-      nwg-look
-      electron
-      wget
-      zip
-      unzip
-      udiskie
-      wl-clipboard
-      brightnessctl
-      playerctl
-      microsoft-edge
-      discord
-      btop
-      libreoffice
-      xdg-utils
-      nautilus
-      satty
-
-      # games
-      prismlauncher
-      heroic
-      protonplus
-
-      # Developer tools and software that I use
-      nixfmt
-      jdk
-      python3
-      gcc
-      devenv
-      vscode
-
-      foot
-      starship
-    ];
+    packages = with pkgs; [ ];
   };
 
   hjem.users.chen = {
