@@ -24,7 +24,7 @@ in
     XCURSOR_THEME = "Adwaita"; 
     XCURSOR_SIZE = "24"; 
   };
-
+  
   fonts = {
     fontDir.enable = true;
     enableDefaultPackages = true;
@@ -45,6 +45,8 @@ in
     qt6Packages.qt6ct
 
     # basic packages that I need/want
+    networkmanagerapplet
+    openssl
     nwg-look
     electron
     wget
