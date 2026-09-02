@@ -87,6 +87,7 @@ in
       "wheel"
       "video"
       "libvirtd"
+      "docker"
     ];
     packages = with pkgs; [ ];
   };
@@ -128,4 +129,6 @@ in
     extraPackages = with pkgs; [ adwaita-icon-theme ]; 
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
+  virtualisation.docker.enable = true; 
+  services.tailscale.enable = true;
 }
