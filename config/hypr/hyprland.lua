@@ -16,15 +16,15 @@ end)
 hl.bind("SHIFT + CTRL + Q", hl.dsp.exit())
 
 -- Launch Applications/Commands
-hl.bind("SUPER + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
-hl.bind("SUPER + Return", hl.dsp.exec_cmd("foot"))
-hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
-hl.bind("SUPER + B", hl.dsp.exec_cmd("microsoft-edge"))
-hl.bind("SUPER + Space", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
-hl.bind("SUPER + C", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
-hl.bind("SUPER + L", hl.dsp.exec_cmd("noctalia msg session lock"))
-hl.bind("SUPER + W", hl.dsp.exec_cmd("noctalia msg panel-toggle wallpaper"))
-hl.bind("SUPER + V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
+hl.bind("ALT + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind("ALT + Return", hl.dsp.exec_cmd("foot"))
+hl.bind("ALT + E", hl.dsp.exec_cmd("thunar"))
+hl.bind("ALT + B", hl.dsp.exec_cmd("microsoft-edge"))
+hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind("SUPER + Space", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
+hl.bind("ALT + L", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind("ALT + W", hl.dsp.exec_cmd("noctalia msg panel-toggle wallpaper"))
+hl.bind("ALT + V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
 
 -- hl.bind("SUPER + Space", hl.dsp.exec_cmd("hyprlauncher -t"))
 -- hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
@@ -37,27 +37,27 @@ hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 -- hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m output"))
 
 -- Window Management
-hl.bind("SUPER + Q", hl.dsp.window.close())
-hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized" }))
-hl.bind("SUPER + C", hl.dsp.window.center())
-hl.bind("SUPER + CTRL + space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("ALT + Q", hl.dsp.window.close())
+hl.bind("ALT + F", hl.dsp.window.fullscreen())
+hl.bind("ALT + M", hl.dsp.window.fullscreen({ mode = "maximized" }))
+hl.bind("ALT + C", hl.dsp.window.center())
+hl.bind("ALT + CTRL + Space", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd("noctalia msg window-switcher"))
 
-hl.bind("SUPER + Left", hl.dsp.focus({ direction = "left" }))
-hl.bind("SUPER + Right", hl.dsp.focus({ direction = "right" }))
-hl.bind("SUPER + Up", hl.dsp.focus({ direction = "up" }))
-hl.bind("SUPER + Down", hl.dsp.focus({ direction = "down" }))
+hl.bind("ALT + Left", hl.dsp.focus({ direction = "left" }))
+hl.bind("ALT + Right", hl.dsp.focus({ direction = "right" }))
+hl.bind("ALT + Up", hl.dsp.focus({ direction = "up" }))
+hl.bind("ALT + Down", hl.dsp.focus({ direction = "down" }))
 
-hl.bind("SUPER + SHIFT + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
+hl.bind("ALT + SHIFT + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+hl.bind("ALT + SHIFT + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+hl.bind("ALT + SHIFT + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+hl.bind("ALT + SHIFT + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
 
-hl.bind("SUPER + CTRL + Left", hl.dsp.window.swap({ direction = "left" }))
-hl.bind("SUPER + CTRL + Right", hl.dsp.window.swap({ direction = "right" }))
-hl.bind("SUPER + CTRL + Up", hl.dsp.window.swap({ direction = "up" }))
-hl.bind("SUPER + CTRL + Down", hl.dsp.window.swap({ direction = "down" }))
+hl.bind("ALT + CTRL + Left", hl.dsp.window.swap({ direction = "left" }))
+hl.bind("ALT + CTRL + Right", hl.dsp.window.swap({ direction = "right" }))
+hl.bind("ALT + CTRL + Up", hl.dsp.window.swap({ direction = "up" }))
+hl.bind("ALT + CTRL + Down", hl.dsp.window.swap({ direction = "down" }))
 
 -- hl.bind("ALT + Tab", function()
 --     hl.dispatch(hl.dsp.window.cycle_next())   -- Change focus to another window
@@ -65,34 +65,34 @@ hl.bind("SUPER + CTRL + Down", hl.dsp.window.swap({ direction = "down" }))
 -- end)
 
 -- Workspace Management
-hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }))
-hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }))
-hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }))
-hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }))
-hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }))
-hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }))
-hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }))
-hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }))
-hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }))
+hl.bind("ALT + 1", hl.dsp.focus({ workspace = 1 }))
+hl.bind("ALT + 2", hl.dsp.focus({ workspace = 2 }))
+hl.bind("ALT + 3", hl.dsp.focus({ workspace = 3 }))
+hl.bind("ALT + 4", hl.dsp.focus({ workspace = 4 }))
+hl.bind("ALT + 5", hl.dsp.focus({ workspace = 5 }))
+hl.bind("ALT + 6", hl.dsp.focus({ workspace = 6 }))
+hl.bind("ALT + 7", hl.dsp.focus({ workspace = 7 }))
+hl.bind("ALT + 8", hl.dsp.focus({ workspace = 8 }))
+hl.bind("ALT + 9", hl.dsp.focus({ workspace = 9 }))
 
-hl.bind("SUPER + CTRL + 1", hl.dsp.window.move({ workspace = 1, follow = false }))
-hl.bind("SUPER + CTRL + 2", hl.dsp.window.move({ workspace = 2, follow = false }))
-hl.bind("SUPER + CTRL + 3", hl.dsp.window.move({ workspace = 3, follow = false }))
-hl.bind("SUPER + CTRL + 4", hl.dsp.window.move({ workspace = 4, follow = false }))
-hl.bind("SUPER + CTRL + 5", hl.dsp.window.move({ workspace = 5, follow = false }))
-hl.bind("SUPER + CTRL + 6", hl.dsp.window.move({ workspace = 6, follow = false }))
-hl.bind("SUPER + CTRL + 7", hl.dsp.window.move({ workspace = 7, follow = false }))
-hl.bind("SUPER + CTRL + 8", hl.dsp.window.move({ workspace = 8, follow = false }))
-hl.bind("SUPER + CTRL + 9", hl.dsp.window.move({ workspace = 9, follow = false }))
+hl.bind("ALT + CTRL + 1", hl.dsp.window.move({ workspace = 1, follow = false }))
+hl.bind("ALT + CTRL + 2", hl.dsp.window.move({ workspace = 2, follow = false }))
+hl.bind("ALT + CTRL + 3", hl.dsp.window.move({ workspace = 3, follow = false }))
+hl.bind("ALT + CTRL + 4", hl.dsp.window.move({ workspace = 4, follow = false }))
+hl.bind("ALT + CTRL + 5", hl.dsp.window.move({ workspace = 5, follow = false }))
+hl.bind("ALT + CTRL + 6", hl.dsp.window.move({ workspace = 6, follow = false }))
+hl.bind("ALT + CTRL + 7", hl.dsp.window.move({ workspace = 7, follow = false }))
+hl.bind("ALT + CTRL + 8", hl.dsp.window.move({ workspace = 8, follow = false }))
+hl.bind("ALT + CTRL + 9", hl.dsp.window.move({ workspace = 9, follow = false }))
 
 hl.bind("SUPER + Tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER + CTRL + Tab", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Mouse Binds
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), {
+hl.bind("ALT + mouse:272", hl.dsp.window.drag(), {
     mouse = true,
 })
-hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), {
+hl.bind("ALT + mouse:273", hl.dsp.window.resize(), {
     mouse = true,
 })
 
@@ -144,6 +144,7 @@ hl.config({
         numlock_by_default = true,
         repeat_rate        = 25,
         repeat_delay       = 250,
+        accel_profile = "custom 0.2144477506 0.000 0.307 0.615 1.077 1.539 2.002 2.505 3.208 3.910 4.613 5.315 6.018 6.720 7.423 8.125 8.828 9.530 10.233 10.935 12.387",
 
         follow_mouse       = 1,
 
@@ -163,18 +164,6 @@ hl.gesture({
     fingers = 3,
     direction = "horizontal",
     action = "workspace"
-})
-
-hl.device({ 
-    name =  "pixa3854:00-093a:0274-touchpad", 
-    sensitivity = 0, 
-    accel_profile = "custom 0.2144477506 0.000 0.307 0.615 1.077 1.539 2.002 2.505 3.208 3.910 4.613 5.315 6.018 6.720 7.423 8.125 8.828 9.530 10.233 10.935 12.387", 
-})
-
-hl.device({ 
-    name =  "pixart-usb-optical-mouse", 
-    sensitivity = 0, 
-    accel_profile = "custom 0.2144477506 0.000 0.307 0.615 1.077 1.539 2.002 2.505 3.208 3.910 4.613 5.315 6.018 6.720 7.423 8.125 8.828 9.530 10.233 10.935 12.387", 
 })
 
 -- General Setting and Decoration
