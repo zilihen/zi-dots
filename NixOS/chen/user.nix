@@ -45,7 +45,7 @@ in
     qt6Packages.qt6ct
     xfce4-whiskermenu-plugin
     xfce4-panel-profiles
-    qogir-icon-theme
+    papirus-icon-theme
 
     # basic packages that I need/want
     geteduroam
