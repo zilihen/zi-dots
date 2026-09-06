@@ -17,12 +17,11 @@
 
   xdg.portal = {
     enable = true;
-    config.common.default = ["hyprland" "gtk"];
+    config.common.default = ["gtk"];
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
     ];
-    configPackages = [ pkgs.hyprland ];
+    configPackages = [ ];
   };
 
   nix = {
@@ -53,7 +52,7 @@
     jack.enable = true;
   };
 
-  services.displayManager.noctalia-greeter.enable = true;
+  services.displayManager.ly.enable = true;
 
   # services.displayManager.gdm.enable = true;
 
@@ -64,15 +63,12 @@
     naturalScrolling = true;
     clickMethod = "clickfinger";
     scrollMethod = "twofinger";
-    accelProfile = "adaptive";
-    accelSpeed = "0";
   };
   services.xserver = {
     enable = true;
     xkb.layout = "us";
     autoRepeatDelay = 250;
     autoRepeatInterval = 25;
-    # windowManager.oxwm.enable = true;
-    # displayManager.startx.enable = true;
+    desktopManager.xfce.enable = true;
   };
 }

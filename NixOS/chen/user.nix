@@ -19,7 +19,7 @@ in
 {
 
   environment.sessionVariables = {
-    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    # ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     QT_QPA_PLATFORMTHEME = "qt6ct";
     XCURSOR_THEME = "Adwaita"; 
     XCURSOR_SIZE = "24"; 
@@ -43,6 +43,9 @@ in
     adwaita-icon-theme
     adw-gtk3
     qt6Packages.qt6ct
+    xfce4-whiskermenu-plugin
+    xfce4-panel-profiles
+    qogir-icon-theme
 
     # basic packages that I need/want
     geteduroam
