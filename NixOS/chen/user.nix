@@ -59,6 +59,7 @@ in
     libreoffice
     xdg-utils
     satty
+    qalculate-gtk
 
     # games
     prismlauncher
