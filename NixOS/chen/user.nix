@@ -50,21 +50,14 @@ in
     # basic packages that I need/want
     geteduroam
     openssl
-    nwg-look
-    electron
     wget
     zip
     unzip
-    udiskie
-    wl-clipboard
-    brightnessctl
-    playerctl
     microsoft-edge
     discord
     btop
     libreoffice
     xdg-utils
-    nautilus
     satty
 
     # games
@@ -106,7 +99,7 @@ in
 
   services.flatpak.enable = true;
   programs.noctalia = { 
-    enable = true; 
+    enable = false; 
     recommendedServices.enable = true;
   };
   programs.fish.enable = true;
