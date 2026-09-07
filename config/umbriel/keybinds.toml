@@ -1,0 +1,75 @@
+[keybinds]
+# Launch Applications/Commands
+"Mod+Return" = "spawn:foot"
+"Mod+E" = "spawn:thunar"
+"Super" = "spawn:noctalia msg panel-toggle launcher"
+"Super+Space" = "spawn:noctalia msg panel-toggle control-center"
+"Mod+L" = "spawn:noctalia msg session lock"
+"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
+
+"Print" = "spawn:noctalia msg screenshot-region"
+
+# Window Management
+"Mod+Q" = "window-close"
+"Mod+F" = "window-toggle-fullscreen"
+"Mod+M" = "window-toggle-maximize-to-edges"
+"Mod+C" = "window-center"
+"Mod+CTRL+Space" = "window-toggle-floating"
+"Mod+Tab" = "spawn:noctalia msg window-switcher"
+
+"Mod+Left" = "window-focus-left"
+"Mod+Right" = "window-focus-right"
+"Mod+Up" = "window-focus-up"
+"Mod+Down" = "window-focus-down"
+"Mod+WheelUp" = "window-focus-left"
+"Mod+WheelDown" = "window-focus-right"
+
+"Mod+Shift+Left" = "window-modify-width:-0.01"
+"Mod+Shift+Right" = "window-modify-width:0.01"
+"Mod+Shift+Up" = "window-modify-height:0.01"
+"Mod+Shift+Down" = "window-modify-height:-0.01"
+
+"Mod+Ctrl+Left" = "window-move-or-output-left"
+"Mod+Ctrl+Right" = "window-move-or-output-right"
+"Mod+Ctrl+Up" = "window-move-or-output-up"
+"Mod+Ctrl+Down" = "window-move-or-output-down"
+
+# Workspace Management
+"Super+Tab" = "overview-toggle"
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+
+"Mod+Ctrl+1" = "window-move-to-workspace:1"
+"Mod+Ctrl+2" = "window-move-to-workspace:2"
+"Mod+Ctrl+3" = "window-move-to-workspace:3"
+"Mod+Ctrl+4" = "window-move-to-workspace:4"
+"Mod+Ctrl+5" = "window-move-to-workspace:5"
+"Mod+Ctrl+6" = "window-move-to-workspace:6"
+"Mod+Ctrl+7" = "window-move-to-workspace:7"
+"Mod+Ctrl+8" = "window-move-to-workspace:8"
+"Mod+Ctrl+9" = "window-move-to-workspace:9"
+
+# Laptop stuff
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioMicMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+"XF86MonBrightnessUp" = "spawn:brightnessctl set +5%"
+"XF86MonBrightnessDown" = "spawn:brightnessctl set 5%-"
+
+# Media Control
+"XF86AudioPlay" = "spawn:playerctl play-pause"
+"XF86AudioNext" = "spawn:playerctl next"
+"XF86AudioPrev" = "spawn:playerctl previous"
+
+
+

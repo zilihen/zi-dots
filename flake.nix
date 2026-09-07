@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    umbriel = { 
+      url = "git+https://github.com/noctalia-dev/umbriel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hardware = { 
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +34,7 @@
       system = "x86_64-linux";
       specialArgs = {inherit inputs; };
       modules = [
+        inputs.umbriel.nixosModules.default
         inputs.hjem.nixosModules.default
         inputs.hardware.nixosModules.framework-intel-core-ultra-series1
         ./NixOS/laptop.nix

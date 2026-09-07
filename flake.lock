@@ -60,7 +60,50 @@
       "inputs": {
         "hardware": "hardware",
         "hjem": "hjem",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "umbriel": "umbriel"
+      }
+    },
+    "umbriel": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
+      },
+      "locked": {
+        "lastModified": 1788745364,
+        "narHash": "sha256-zApKTpgv6JewIwymhMYwo4/h59F9X+qATyWuTcgoO0A=",
+        "ref": "refs/heads/main",
+        "rev": "aa1648e9723592c8a64fff369f5f8de1569be7b9",
+        "revCount": 836,
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/umbriel"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/umbriel"
+      }
+    },
+    "xdg-desktop-portal-umbriel": {
+      "inputs": {
+        "nixpkgs": [
+          "umbriel",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788532681,
+        "narHash": "sha256-xVLPCVS5RElZQirnx90DB+4OEvUGGqklMsNW+eP6EbE=",
+        "owner": "noctalia-dev",
+        "repo": "xdg-desktop-portal-umbriel",
+        "rev": "5e7efc50ce5013b4799f60c9de8b830026f236a4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "xdg-desktop-portal-umbriel",
+        "type": "github"
       }
     }
   },

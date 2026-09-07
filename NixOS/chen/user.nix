@@ -8,7 +8,7 @@
 let
   configs = {
     hypr = "hypr";
-    oxwm = "oxwm";
+    umbriel = "umbriel";
     foot = "foot";
     fish = "fish";
     noctalia = "noctalia";
@@ -19,8 +19,6 @@ in
 {
 
   environment.sessionVariables = {
-    # ELECTRON_OZONE_PLATFORM_HINT = "wayland";
-    QT_QPA_PLATFORMTHEME = "qt6ct";
     XCURSOR_THEME = "Adwaita"; 
     XCURSOR_SIZE = "24"; 
   };
@@ -42,10 +40,13 @@ in
     # cursors, and theme
     adwaita-icon-theme
     adw-gtk3
-    qt6Packages.qt6ct
+    qt6Packages.qt6ct 
+    papirus-icon-theme
+    tela-icon-theme
+    orchis-theme
     xfce4-whiskermenu-plugin
     xfce4-panel-profiles
-    papirus-icon-theme
+   
 
     # basic packages that I need/want
     geteduroam
@@ -60,6 +61,7 @@ in
     xdg-utils
     satty
     qalculate-gtk
+    xwayland-satellite
 
     # games
     prismlauncher
@@ -99,13 +101,15 @@ in
   };
 
   services.flatpak.enable = true;
+  programs.thunar.enable = true;
   programs.noctalia = { 
-    enable = false; 
+    enable = true; 
     recommendedServices.enable = true;
   };
   programs.fish.enable = true;
+  programs.umbriel.enable = true;
   programs.hyprland = {
-    enable = true;
+    enable = false;
     withUWSM = true;
     xwayland.enable = true;
   };
