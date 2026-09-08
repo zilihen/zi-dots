@@ -36,6 +36,7 @@
   services.upower.enable = true;
   services.printing = {
     enable = true;
+    drivers = [pkgs.hplip];
   };
   services.avahi = {
     enable = true;

@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    winapps = {
+      url = "github:winapps-org/winapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hardware = { 
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,9 +35,9 @@
         ./NixOS/chen
       ];
     };
-    nixosConfigurations.nixos-laptop = inputs.nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos-laptop = inputs.nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = {inherit inputs; };
+      specialArgs = {inherit inputs system; };
       modules = [
         inputs.umbriel.nixosModules.default
         inputs.hjem.nixosModules.default

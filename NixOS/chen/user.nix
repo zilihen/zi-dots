@@ -2,6 +2,7 @@
   inputs,
   config,
   pkgs,
+  system ? pkgs.system,
   ...
 }:
 
@@ -63,6 +64,10 @@ in
     qalculate-gtk
     xwayland-satellite
 
+    # winapp stuff
+    inputs.winapps.packages."${system}".winapps
+    inputs.winapps.packages."${system}".winapps-launcher
+
     # games
     prismlauncher
     heroic
@@ -70,9 +75,10 @@ in
 
     # Developer tools and software that I use
     nixfmt
-    jdk
+    jdk25
     python3
     gcc
+    gdb
     devenv
     vscode
     foot
@@ -100,6 +106,11 @@ in
     }) configs;
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    gcc
+    gdb
+  ];
   services.flatpak.enable = true;
   programs.thunar.enable = true;
   services.gvfs.enable = true;
