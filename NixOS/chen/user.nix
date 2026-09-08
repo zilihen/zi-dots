@@ -102,6 +102,9 @@ in
 
   services.flatpak.enable = true;
   programs.thunar.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+  services.udisks2.enable = true;
   programs.noctalia = { 
     enable = true; 
     recommendedServices.enable = true;
