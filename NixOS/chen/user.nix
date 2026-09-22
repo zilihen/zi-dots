@@ -13,6 +13,7 @@ let
     foot = "foot";
     fish = "fish";
     noctalia = "noctalia";
+    wezterm = "wezterm";
     "starship.toml" = "starship.toml";
   };
 in
@@ -83,6 +84,7 @@ in
     vscode
     foot
     starship
+    wezterm
   ];
 
   users.users.chen = {
