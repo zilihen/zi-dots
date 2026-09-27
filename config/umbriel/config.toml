@@ -75,14 +75,12 @@ hdr = "fullscreen"
 match.app_id = "satty"
 default_floating = true
 default_focused = false 
-default_width = 0.5
-default_height = 0.6
+default_floating_size = { width = 0.5, height = 0.6 }
 
 [[window_rule]]
 match.app_id = "[Tt]hunar"
 default_floating = true
 default_focused = false 
-default_width = 0.5
-default_height = 0.6
+default_floating_size = { width = 0.5, height = 0.6 }
 
 

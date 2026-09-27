@@ -49,7 +49,6 @@ in
     xfce4-whiskermenu-plugin
     xfce4-panel-profiles
     xfdashboard
-   
 
     # basic packages that I need/want
     geteduroam

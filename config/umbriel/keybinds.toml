@@ -16,7 +16,7 @@
 "Mod+M" = "window-toggle-maximize-to-edges"
 "Mod+C" = "window-center"
 "Mod+CTRL+Space" = "window-toggle-floating"
-"Mod+Tab" = "spawn:noctalia msg window-switcher"
+"Alt+Tab" = "spawn:noctalia msg window-switcher"
 
 "Mod+Left" = "window-focus-left"
 "Mod+Right" = "window-focus-right"
@@ -25,10 +25,10 @@
 "Mod+WheelUp" = "window-focus-left"
 "Mod+WheelDown" = "window-focus-right"
 
-"Mod+Shift+Left" = "window-modify-width:-0.01"
-"Mod+Shift+Right" = "window-modify-width:0.01"
-"Mod+Shift+Up" = "window-modify-height:0.01"
-"Mod+Shift+Down" = "window-modify-height:-0.01"
+"Mod+Equal" = "window-modify-primary-extent:0.01" # Increase the width of the window
+"Mod+Minus" = "window-modify-primary-extent:-0.01" # Decrease the width of the window
+"Mod+Shift+Equal" = "window-modify-secondary-extent:0.01" # Increase the height of the window
+"Mod+Shift+Minus" = "window-modify-secondary-extent:-0.01" # Decrease the height of the window
 
 "Mod+Ctrl+Left" = "window-move-or-output-left"
 "Mod+Ctrl+Right" = "window-move-or-output-right"
@@ -47,15 +47,15 @@
 "Mod+8" = "workspace-switch:8"
 "Mod+9" = "workspace-switch:9"
 
-"Mod+Ctrl+1" = "window-move-to-workspace:1"
-"Mod+Ctrl+2" = "window-move-to-workspace:2"
-"Mod+Ctrl+3" = "window-move-to-workspace:3"
-"Mod+Ctrl+4" = "window-move-to-workspace:4"
-"Mod+Ctrl+5" = "window-move-to-workspace:5"
-"Mod+Ctrl+6" = "window-move-to-workspace:6"
-"Mod+Ctrl+7" = "window-move-to-workspace:7"
-"Mod+Ctrl+8" = "window-move-to-workspace:8"
-"Mod+Ctrl+9" = "window-move-to-workspace:9"
+"Mod+Ctrl+1" = "window-move-to-workspace-silent:1"
+"Mod+Ctrl+2" = "window-move-to-workspace-silent:2"
+"Mod+Ctrl+3" = "window-move-to-workspace-silent:3"
+"Mod+Ctrl+4" = "window-move-to-workspace-silent:4"
+"Mod+Ctrl+5" = "window-move-to-workspace-silent:5"
+"Mod+Ctrl+6" = "window-move-to-workspace-silent:6"
+"Mod+Ctrl+7" = "window-move-to-workspace-silent:7"
+"Mod+Ctrl+8" = "window-move-to-workspace-silent:8"
+"Mod+Ctrl+9" = "window-move-to-workspace-silent:9"
 
 # Laptop stuff
 "XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
