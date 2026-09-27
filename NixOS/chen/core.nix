@@ -85,6 +85,6 @@
     # Set shortcut for application finder
     # Edit shortcut for window manager
     # import panel settings that is saved in config folder
-    desktopManager.xfce.enable = true;
+    desktopManager.xfce.enable = false;
   };
 }
