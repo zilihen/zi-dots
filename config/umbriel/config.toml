@@ -16,7 +16,7 @@ show_cheatsheet = false
 # Misc
 [hot_corners.top_left]
 enabled = true
-delay_ms = 500
+delay_ms = 250
 action = "overview-open"
 
 [layout]
