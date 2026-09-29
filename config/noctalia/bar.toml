@@ -11,7 +11,7 @@ capsule = true
 capsule_foreground = "#FFFFFF"
 capsule_fill = "#000000"
 
-start = ["active_window"]
+start = ["media", "active_window"]
 center = ["tray", "screenshot", "group:middle"]
 end = ["battery", "keyboard_layout"]
 
@@ -65,7 +65,7 @@ focused_color = "#e3a81d"
 hide_when_off = true
 
 [widget.media]
-hide_when_no_media = true
+hide_when_no_media = false
 title_scroll = "always"
 color = "#c60ef4"
 
