@@ -13,11 +13,17 @@ mod_key = "Super"
 xwayland = true
 show_cheatsheet = false
 
+# Misc
+[hot_corners.top_left]
+enabled = true
+delay_ms = 500
+action = "overview-open"
+
 [layout]
 mode = "dwindle"
 
 [animation]
-enabled = false
+enabled = true
 
 [input.cursor]
 theme = "Adwaita"
